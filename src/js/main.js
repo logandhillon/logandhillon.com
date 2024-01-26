@@ -1,3 +1,5 @@
+// Copyright (c) 2024 Logan Dhillon
+
 async function loadContentIntoElement(staticUri, tagName) {
 	try {
 		const element = document.getElementsByTagName(tagName)[0];
