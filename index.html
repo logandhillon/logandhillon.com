@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Loading... - LDMGamingYT</title>
 	<script>
 		window.location.assign("/src/")
 	</script>
+	<script src="/src/js/main.js"></script>
+	<link href="/dist/output.css" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/5a740087a2.js" crossorigin="anonymous"></script>
 </head>
-<body>
-	Loading...
+
+<body class="min-h-screen flex flex-col">
+	<header class="text-gray-600 bg-gray-50"></header>
+
+	<section class="container mx-auto p-5 text-center mt-32">
+		<h1 class="text-4xl font-semibold">Loading...</h1>
+		<p class="mt-2">Your requested content is loading.<br>You will be automatically redirected once this completes.</p>
+		<i class="fa-solid fa-screwdriver-wrench fa-bounce text-9xl mt-24 text-blue-500"></i>
+	</section>
+
+	<!-- Spacer to push footer to the bottom of the page -->
+	<div class="flex-grow"></div>
+
+	<footer class="bg-gray-50"></footer>
 </body>
+
 </html>
