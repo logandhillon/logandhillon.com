@@ -6,4 +6,4 @@ My portfolio page.
 
 See it live at [logandhillon.github.io](https://logandhillon.github.io) 🔗
 
-Copyright (c) 2024 Logan Dhillon
+Copyright (c) 2024 Logan Dhillon. All rights reserved.

@@ -1,4 +1,4 @@
-// Copyright (c) 2024 Logan Dhillon
+// Copyright (c) 2024 Logan Dhillon. All rights reserved.
 
 async function loadContentIntoElement(staticUri, tagName) {
 	try {
