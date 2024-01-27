@@ -16,8 +16,25 @@ async function loadContentIntoElement(staticUri, tagName) {
 	}
 }
 
+// Get header & footer from static
 document.addEventListener('DOMContentLoaded', async function () {
-	// Get header & footer from static
 	await loadContentIntoElement('/src/static/header.html', 'header');
 	await loadContentIntoElement('/src/static/footer.html', 'footer');
+});
+
+/**
+ * `data-replace` value. Replaces key with value on load.
+ * @example data-replace="{'replace-this': 'with-this'}" (HTML)
+ */
+document.addEventListener("DOMContentLoaded", function () {
+	setTimeout(function () {
+		var replacers = document.querySelectorAll('[data-replace]');
+		for (var i = 0; i < replacers.length; i++) {
+			let replaceClasses = JSON.parse(replacers[i].dataset.replace.replace(/'/g, '"'));
+			Object.keys(replaceClasses).forEach(function (key) {
+				replacers[i].classList.remove(key);
+				replacers[i].classList.add(replaceClasses[key]);
+			});
+		}
+	}, 1);
 });
