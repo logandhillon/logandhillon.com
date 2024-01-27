@@ -9,9 +9,12 @@ module.exports = {
             width: "0%",
             visibility: "hidden"
           },
+          "50%": {
+            width: "100%"
+          },
           "100%": {
             width: "100%"
-          }
+          } 
         },
         blink: {
           "50%": {
@@ -19,11 +22,11 @@ module.exports = {
           },
           "100%": {
             borderColor: "black"
-          }
+          }  
         }
       },
       animation: {
-        typing: "typing 1s steps(15) alternate, blink .7s infinite"
+        typing: "typing 2s steps(30) infinite alternate, blink .7s infinite"
       }
     },
   },
