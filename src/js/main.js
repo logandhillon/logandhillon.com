@@ -20,13 +20,11 @@ async function loadContentIntoElement(staticUri, tagName) {
 document.addEventListener('DOMContentLoaded', async function () {
 	await loadContentIntoElement('/src/static/header.html', 'header');
 	await loadContentIntoElement('/src/static/footer.html', 'footer');
-});
 
-/**
- * `data-replace` value. Replaces key with value on load.
- * @example data-replace="{'replace-this': 'with-this'}" (HTML)
- */
-document.addEventListener("DOMContentLoaded", function () {
+	/**
+	 * `data-replace` value. Replaces key with value on load.
+	 * @example data-replace="{'replace-this': 'with-this'}" (HTML)
+	 */
 	setTimeout(function () {
 		var replacers = document.querySelectorAll('[data-replace]');
 		for (var i = 0; i < replacers.length; i++) {
