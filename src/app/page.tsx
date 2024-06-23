@@ -16,7 +16,7 @@ export default function Home() {
 
     <section className="z-0 text-center bg-gradient-to-br from-emerald-100 to-purple-100 h-[70rem] -translate-y-24 pt-48">
       <div className="container mx-auto flex flex-col items-center">
-        <h2 className={`text-6xl font-bold mt-48 transition-all duration-500 ease-out ${animEnd ? 'translate-y-0' : 'translate-y-12'} ${animEnd ? 'opacity-100' : 'opacity-0'} mx-8`}>Hi, I'm Logan.</h2>
+        <h2 className={`text-6xl font-bold mt-48 transition-all duration-500 ease-out ${animEnd ? 'translate-y-0' : 'translate-y-12'} ${animEnd ? 'opacity-100' : 'opacity-0'} mx-8`}>Hi, I&apos;m Logan.</h2>
 
         <div className='mt-8 text-lg'>
           <Typewriter
