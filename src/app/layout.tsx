@@ -16,6 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script src="https://kit.fontawesome.com/5a740087a2.js" crossorigin="anonymous"></script>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
