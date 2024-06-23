@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Header from "@/components/header";
 import Footer from '@/components/footer';
+import { Typewriter } from 'nextjs-simple-typewriter'
 
 export default function Home() {
   const [animEnd, initAnim] = useState(false);
@@ -18,8 +19,16 @@ export default function Home() {
       <div className="container mx-auto flex flex-col items-center">
         <h2 className={`text-6xl font-bold mt-48 transition-all duration-500 ease-out ${animEnd ? 'translate-y-0' : 'translate-y-12'} ${animEnd ? 'opacity-100' : 'opacity-0'} mx-8`}>Hi, I'm Logan.</h2>
 
-        <div className="overflow-hidden">
-          <p className="mt-8 text-xl animate-typing overflow-hidden whitespace-nowrap border-r-2 border-r-neutral-950" id="message"></p>
+        <div className='mt-8 text-lg'>
+          <Typewriter
+            words={["A full stack developer.", "Can program in over 15 languages.", "Design and develop."]}
+            loop={0}
+            cursor
+            cursorStyle='|'
+            typeSpeed={20}
+            deleteSpeed={20}
+            delaySpeed={2000}
+          />
         </div>
 
         <a href="#" className="inline-block bg-purple-600 text-white py-4 px-20 text-lg rounded-lg transition-transform hover:-translate-y-1 mt-8">
