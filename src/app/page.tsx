@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import Header from "@/components/header";
-import Footer from '@/components/footer';
 import { Typewriter } from 'nextjs-simple-typewriter'
 
 export default function Home() {
@@ -13,7 +12,7 @@ export default function Home() {
   }, []);
 
   return <main>
-    <Header visible={animEnd} />
+    <Header className={`absolute z-10 left-0 right-0 ${animEnd ? 'translate-y-0' : '-translate-y-full'}`} />
 
     <section className="z-0 text-center bg-gradient-to-br from-emerald-100 to-purple-100 h-[70rem] -translate-y-24 pt-48">
       <div className="container mx-auto flex flex-col items-center">
@@ -36,7 +35,5 @@ export default function Home() {
         </a>
       </div>
     </section>
-
-    <Footer />
   </main>;
 }

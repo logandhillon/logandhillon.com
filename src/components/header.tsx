@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import React from 'react';
 
-interface HeaderProps {
-  visible: boolean;
+interface Props {
+  className?: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ visible }) => {
-	return <header className={`absolute left-0 right-0 z-10 text-gray-600 body-font shadow-lg transition-transform duration-500 ease-out bg-neutral-50 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
+const Header: React.FC<Props> = ({ className }) => {
+	return <header className={`text-gray-600 body-font shadow-lg transition-transform duration-500 ease-out bg-neutral-50 ${className}`}>
 		<div className="body-font container mx-auto flex flex-wrap p-5 md:flex-row">
 			<Image
 				src="/memoji.jpg"
