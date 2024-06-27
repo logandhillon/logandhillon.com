@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import Footer from "@/components/footer";
+import { NextUIProvider } from '@nextui-org/react';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,8 +23,10 @@ export default function RootLayout({
         <script async src="https://kit.fontawesome.com/5a740087a2.js" crossOrigin="anonymous"></script>
       </head>
       <body className={inter.className}>
-        {children}
-        <Footer />
+        <NextUIProvider>
+          {children}
+          <Footer />
+        </NextUIProvider>
       </body>
     </html>
   );
