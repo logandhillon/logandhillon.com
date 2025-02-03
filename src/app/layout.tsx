@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import Footer from "@/components/footer";
-import { NextUIProvider } from '@nextui-org/react';
+import { HeroUIProvider } from "@heroui/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,10 +24,10 @@ export default function RootLayout({
         <meta name="google-site-verification" content="wpclubyVAcYUAC40rgkUB5RAncvSwdtZkyOa8bxg2cQ" />
       </head>
       <body className={inter.className}>
-        <NextUIProvider>
+        <HeroUIProvider>
           {children}
           <Footer />
-        </NextUIProvider>
+        </HeroUIProvider>
       </body>
     </html>
   );
