@@ -1,9 +1,14 @@
 # logandhillon.github.io
 
-My portfolio page.
+Hi, I'm Logan. Programmer, designer, engineer, and entrepreneur.
 
-> ⚠️ **WORK IN PROGRESS!**<br>This is not completed yet.
+You've source code for my website, [logandhillon.github.io](https://logandhillon.github.io). Check it out!
 
-See it live at [logandhillon.github.io](https://logandhillon.github.io) 🔗
+While you're here, check out my other repos on my profile!
 
-Copyright (c) 2024 Logan Dhillon. All rights reserved.
+> [!NOTE]
+> This website is still a work in progress and is being actively developed.
+
+You can directly contact me via the email on my website.
+
+<sup>&copy; 2025 Logan Dhillon. All rights reserved.</sup>
