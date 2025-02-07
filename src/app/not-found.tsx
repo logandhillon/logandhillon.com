@@ -1,18 +1,44 @@
-"use client"
+"use client";
 
 import Header from "@/components/header";
+import { Button, ButtonGroup } from "@heroui/react";
+import Link from "next/link";
+import { Typewriter } from "nextjs-simple-typewriter";
 
-export default function Home() {
-	return <main>
-		<Header />
+export default function NotFound() {
+  return (
+    <div className="">
+      <Header />
 
-		<section className="container mx-auto p-5 text-center mt-32 mb-72">
-			<h1 className="text-4xl font-semibold">404 Not Found</h1>
-			<p>The content you&apos;re looking for could not be found.</p>
-			<p className="mb-4">Sorry about that.</p>
-			<a href="/" className="text-white bg-purple-600 hover:bg-purple-700 py-2 px-4 rounded-md">Go Home</a>
-			<a href="#" onClick={() => window.history.back()} className="ml-2 text-gray-700 bg-gray-300 hover:bg-gray-400 py-2 px-4 rounded-md">Go Back</a>
-		</section>
+      <section className="container mx-auto p-5 text-center mt-32 mb-72 flex flex-col gap-4">
+        <h1 className="text-4xl font-semibold">
+          <Typewriter
+            words={["Whoops!", "404 Not Found :("]}
+            loop={1}
+            typeSpeed={80}
+            delaySpeed={1000}
+            deleteSpeed={40}
+            cursor
+            cursorStyle={
+              <span className="font-light text-default-500 animate-pulse">
+                |
+              </span>
+            }
+          />
+        </h1>
+        <p className="mb-4">
+          The content you&apos;re looking for could not be found.
+          <br />
+          Sorry about that.
+        </p>
 
-	</main>;
+        <ButtonGroup>
+          <Button color="primary" as={Link} href="/">
+            Go Home
+          </Button>
+          <Button onPress={() => window.history.back()}>Go Back</Button>
+        </ButtonGroup>
+      </section>
+    </div>
+  );
 }
