@@ -3,29 +3,46 @@
 import siteConfig from "@/config/site";
 import { Button } from "@heroui/react";
 import { EnvelopeSimple } from "@phosphor-icons/react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { Typewriter } from "nextjs-simple-typewriter";
-import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [animEnd, initAnim] = useState(false);
-
-  useEffect(() => {
-    initAnim(true);
-  }, []);
-
   return (
     <section className="z-0 text-center bg-gradient-to-br from-emerald-100 to-purple-100 h-[70rem] -translate-y-24 pt-48">
       <div className="mt-48 flex flex-col items-center space-y-5">
-        <h2
-          className={`text-6xl font-bold transition-all duration-500 ease-out ${
-            animEnd ? "translate-y-0" : "translate-y-12"
-          } ${animEnd ? "opacity-100" : "opacity-0"} mx-8`}
+        <motion.h2
+          initial={{
+            y: 48,
+            opacity: 0,
+          }}
+          animate={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.8,
+            ease: "easeOut",
+          }}
+          className="text-6xl font-bold mx-8"
         >
           Hi, I&apos;m Logan.
-        </h2>
+        </motion.h2>
 
-        <div className="text-lg pb-8">
+        <motion.div
+          className="text-lg"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1,
+            delay: 0.8,
+            ease: "easeOut",
+          }}
+        >
           <Typewriter
             words={siteConfig.hero.words
               .map((value) => ({ value, sort: Math.random() }))
@@ -38,18 +55,42 @@ export default function Home() {
             deleteSpeed={20}
             delaySpeed={2000}
           />
-        </div>
+        </motion.div>
 
-        <Button
-          endContent={<EnvelopeSimple weight="fill" size={24} />}
-          size="lg"
-          color="primary"
-          className="w-64 h-16 font-semibold"
-          as={Link}
-          href={"mailto:" + siteConfig.email}
+        <motion.div
+          initial={{
+            y: 192,
+            opacity: 0,
+          }}
+          animate={{
+            y: 48,
+            opacity: 1,
+            transition: {
+              delay: 0.75,
+              duration: 1.5,
+              ease: "anticipate",
+            },
+          }}
+          whileHover={{
+            scale: 1.25,
+            transition: {
+              type: "spring",
+              bounce: 0.5,
+              duration: 0.5,
+            },
+          }}
         >
-          Get in touch
-        </Button>
+          <Button
+            endContent={<EnvelopeSimple weight="fill" size={24} />}
+            size="lg"
+            color="primary"
+            className="w-64 h-16 font-semibold"
+            as={Link}
+            href={"mailto:" + siteConfig.email}
+          >
+            Get in touch
+          </Button>
+        </motion.div>
       </div>
     </section>
   );
