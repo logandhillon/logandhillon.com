@@ -1,12 +1,10 @@
 "use client";
 
+import siteConfig from "@/config/site";
 import { Tooltip } from "@heroui/react";
 import {
-  Envelope,
   EnvelopeSimple,
   GithubLogo,
-  Icon,
-  IconBase,
   IconContext,
   LinkedinLogo,
 } from "@phosphor-icons/react";
@@ -27,8 +25,8 @@ const FooterIconLink: FC<{
 
 export default function Footer() {
   return (
-    <footer className="text-gray-600 body-font bg-neutral-950 mt-32">
-      <div className="text-white body-font container text-center px-5 py-16 mx-auto flex items-center sm:flex-row flex-col space-x-2">
+    <footer className="text-background bg-black">
+      <div className="text-center px-5 py-16 mx-auto grid grid-rows-2 grid-cols-1 sm:grid-cols-2 sm:grid-rows-1">
         <div className="sm:text-left max-w-[512px]">
           <h3 className="uppercase text-2xl font-bold py-4">Logan Dhillon</h3>
           <p className="text-default-200">
@@ -36,8 +34,8 @@ export default function Footer() {
             manager, engineer, aspiring entrepreneur.
           </p>
         </div>
-        <div className="flex-grow"></div>
-        <div className="sm:text-right mt-8 sm:mt-0">
+
+        <div className="sm:text-right mt-8 sm:mt-0 flex-grow">
           <h3 className="uppercase text-xl sm:text-2xl font-bold py-4">
             Connect With Me
           </h3>
@@ -47,10 +45,10 @@ export default function Footer() {
               size: 24,
             }}
           >
-            <div className="flex gap-4 justify-end">
+            <div className="flex gap-4 justify-center sm:justify-end">
               <FooterIconLink
-                href="mailto:logandhi64@gmail.com"
-                tooltip="Email logandhi64@gmail.com"
+                href={"mailto:" + siteConfig.email}
+                tooltip={"Email " + siteConfig.email}
               >
                 <EnvelopeSimple />
               </FooterIconLink>
@@ -70,10 +68,12 @@ export default function Footer() {
           </IconContext.Provider>
         </div>
       </div>
+
       <div className="text-center">
         <div className="container mx-auto p-8 border-t border-gray-700">
           <p className="text-xs text-neutral-50">
-            © {new Date().getFullYear()} Logan Dhillon. All rights reserved.
+            &copy; {new Date().getFullYear()} Logan Dhillon. All rights
+            reserved.
           </p>
         </div>
       </div>

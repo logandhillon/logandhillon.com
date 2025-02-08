@@ -4,14 +4,16 @@ import "./globals.css";
 
 import Footer from "@/components/footer";
 import { Providers } from "@/components/providers";
+import siteConfig from "../config/site";
+import { Header } from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Logan Dhillon",
-  description: "Logan Dhillon's web portfolio",
+  title: siteConfig.title,
+  description: siteConfig.description,
   icons: {
-    icon: "/favicon.ico",
+    icon: siteConfig.favicon,
   },
 };
 
@@ -30,6 +32,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Providers>
+          <Header />
           <div className="flex flex-col bg-defaut-50">
             <main className="flex-grow">{children}</main>
           </div>
