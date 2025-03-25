@@ -2,11 +2,11 @@ const siteConfig = {
   title: "Logan Dhillon",
   description: "Logan Dhillon's web portfolio",
   favicon: "/favicon.ico",
-  email: "logandhi64@gmail.com",
+  email: "hello@logandhillon.com",
   navbar: {
     links: {
       about: "#about",
-      email: "mailto:logandhi64@gmail.com",
+      email: "mailto:hello@logandhillon.com",
       socials: "#socials",
       projects: "https://github.com/logandhillon?tab=repositories",
     },
