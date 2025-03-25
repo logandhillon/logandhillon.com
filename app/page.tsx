@@ -3,7 +3,7 @@
 import siteConfig from "@/config/site";
 import { Button } from "@heroui/react";
 import { EnvelopeSimple } from "@phosphor-icons/react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { Typewriter } from "nextjs-simple-typewriter";
 
@@ -13,7 +13,7 @@ export default function Home() {
       <div className="mt-48 flex flex-col items-center space-y-5">
         <motion.h2
           initial={{
-            y: 48,
+            y: -48,
             opacity: 0,
           }}
           animate={{
@@ -21,8 +21,8 @@ export default function Home() {
             opacity: 1,
           }}
           transition={{
-            duration: 0.8,
-            ease: "easeOut",
+            duration: 0.6,
+            ease: "easeInOut",
           }}
           className="text-6xl font-bold mx-8"
         >
@@ -39,7 +39,7 @@ export default function Home() {
           }}
           transition={{
             duration: 1,
-            delay: 0.8,
+            delay: 0,
             ease: "easeOut",
           }}
         >
@@ -67,12 +67,12 @@ export default function Home() {
             opacity: 1,
             transition: {
               delay: 0.75,
-              duration: 1.5,
+              duration: 1,
               ease: "anticipate",
             },
           }}
           whileHover={{
-            scale: 1.25,
+            scale: 1.1,
             transition: {
               type: "spring",
               bounce: 0.5,
@@ -87,8 +87,9 @@ export default function Home() {
             className="w-64 h-16 font-semibold"
             as={Link}
             href={"mailto:" + siteConfig.email}
+            variant="shadow"
           >
-            Get in touch
+            Connect with me
           </Button>
         </motion.div>
       </div>
