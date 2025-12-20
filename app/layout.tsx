@@ -13,7 +13,22 @@ export const metadata: Metadata = {
   title: siteConfig.title,
   description: siteConfig.description,
   icons: {
-    icon: siteConfig.favicon,
+    // TODO: create light/dark versions of favicon
+    icon: [
+      {
+        url: siteConfig.icon,
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: siteConfig.icon,
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: siteConfig.icon,
+        type: "image/svg+xml",
+      },
+    ],
+    apple: siteConfig.icon,
   },
 };
 
