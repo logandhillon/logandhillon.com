@@ -27,7 +27,7 @@ export default function Footer() {
   return (
     <footer className="text-background bg-black">
       <div className="text-center px-5 py-16 mx-auto grid grid-rows-2 grid-cols-1 sm:grid-cols-2 sm:grid-rows-1">
-        <div className="sm:text-left max-w-[512px]">
+        <div className="sm:text-left max-w-lg">
           <h3 className="uppercase text-2xl font-bold py-4">Logan Dhillon</h3>
           <p className="text-default-200">
             Full-stack developer, robotics programmer, web developer, team
