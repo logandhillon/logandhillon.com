@@ -3,16 +3,12 @@
 import siteConfig from "@/config/site";
 import {
   Avatar,
-  Button,
   Navbar,
   NavbarBrand,
   NavbarContent,
-  NavbarItem,
-  NavbarMenu,
-  NavbarMenuItem,
-  NavbarMenuToggle,
+  NavbarItem
 } from "@heroui/react";
-import { MapPin } from "@phosphor-icons/react";
+import { Envelope, GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
 import Link from "next/link";
 
 export const Header = () => {
@@ -21,59 +17,31 @@ export const Header = () => {
       <NavbarBrand>
         <Avatar src="/memoji.jpg" />
         <div className="ml-3">
-          <p className="text-lg font-semibold">Logan Dhillon</p>
-          <div className="text-xs text-default-400 flex gap-1 items-center">
-            <MapPin weight="fill" />
-            <p>ON, Canada</p>
-          </div>
+          <h1 className="text-xl font-semibold gradient-text animate-gradient">
+            Logan Dhillon
+          </h1>
+          <p className="text-sm text-muted-foreground">Engineer & Founder</p>
         </div>
       </NavbarBrand>
 
       <NavbarContent className="hidden sm:flex gap-6" justify="end">
-        {Object.keys(siteConfig.navbar.links).map((item, i) => (
+        {siteConfig.navbar.map((item, i) => (
           <NavbarItem
             as={Link}
             key={i}
             className="hover:text-gray-900 transition-transform hover:underline hover:scale-110"
-            href={
-              siteConfig.navbar.links[
-                item as keyof typeof siteConfig.navbar.links
-              ]
-            }
+            href={item}
           >
-            {item}
+            {i == 0 ? (
+              <LinkedinLogo size={22} />
+            ) : i == 1 ? (
+              <GithubLogo size={22} />
+            ) : (
+              <Envelope size={22} />
+            )}
           </NavbarItem>
         ))}
-
-        <NavbarItem>
-          <Button
-            className="transition-transform hover:scale-110 text-md"
-            href={"mailto:" + siteConfig.email}
-            color="primary"
-          >
-            get in touch
-          </Button>
-        </NavbarItem>
       </NavbarContent>
-
-      <NavbarMenuToggle className="sm:hidden" />
-
-      <NavbarMenu>
-        {Object.keys(siteConfig.navbar.links).map((item, i) => (
-          <NavbarMenuItem
-            as={Link}
-            key={i}
-            className="hover:underline"
-            href={
-              siteConfig.navbar.links[
-                item as keyof typeof siteConfig.navbar.links
-              ]
-            }
-          >
-            {item}
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
     </Navbar>
   );
 };
