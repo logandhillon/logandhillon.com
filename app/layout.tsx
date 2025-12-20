@@ -49,7 +49,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           <div className="flex flex-col bg-defaut-50">
-            <main className="flex-grow">{children}</main>
+            <main className="grow">{children}</main>
           </div>
           <Footer />
         </Providers>

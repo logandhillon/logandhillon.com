@@ -35,7 +35,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="sm:text-right mt-8 sm:mt-0 flex-grow">
+        <div className="sm:text-right mt-8 sm:mt-0 grow">
           <h3 className="uppercase text-xl sm:text-2xl font-bold py-4">
             Connect With Me
           </h3>

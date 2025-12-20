@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main>
       {/* hero */}
-      <section className="relative z-0 text-center bg-gradient-to-br from-emerald-100 to-purple-100 py-16">
+      <section className="relative z-0 text-center bg-linear-to-br from-emerald-100 to-purple-100 py-16">
         {/* Grid Overlay */}
         <div className="absolute inset-0 bg-grid-pattern bg-grid-md opacity-30 pointer-events-none" />
 
