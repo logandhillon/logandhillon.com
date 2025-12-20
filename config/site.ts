@@ -17,9 +17,8 @@ const siteConfig = {
       "A full-stack developer.",
       "A hard worker.",
       "A UX/UI designer.",
-      "A robotics programmer.",
       "A team leader.",
-      "An aspriring entrepreneur.",
+      "A businessman.",
     ],
   },
 };

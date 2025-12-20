@@ -3,6 +3,7 @@
 import siteConfig from "@/config/site";
 import {
   Avatar,
+  Button,
   Navbar,
   NavbarBrand,
   NavbarContent,
@@ -28,12 +29,12 @@ export const Header = () => {
         </div>
       </NavbarBrand>
 
-      <NavbarContent className="hidden sm:flex" justify="end">
+      <NavbarContent className="hidden sm:flex gap-6" justify="end">
         {Object.keys(siteConfig.navbar.links).map((item, i) => (
           <NavbarItem
             as={Link}
             key={i}
-            className="hover:text-gray-900 transition-transform hover:underline hover:scale-125"
+            className="hover:text-gray-900 transition-transform hover:underline hover:scale-110"
             href={
               siteConfig.navbar.links[
                 item as keyof typeof siteConfig.navbar.links
@@ -43,6 +44,16 @@ export const Header = () => {
             {item}
           </NavbarItem>
         ))}
+
+        <NavbarItem>
+          <Button
+            className="transition-transform hover:scale-110 text-md"
+            href={"mailto:" + siteConfig.email}
+            color="primary"
+          >
+            get in touch
+          </Button>
+        </NavbarItem>
       </NavbarContent>
 
       <NavbarMenuToggle className="sm:hidden" />
