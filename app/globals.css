@@ -10,7 +10,6 @@
     @apply bg-background text-foreground;
   }
 }
-
 /* Added custom gradient and animation utilities */
 @layer utilities {
   .gradient-text {
