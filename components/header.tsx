@@ -13,7 +13,7 @@ import Link from "next/link";
 
 export const Header = () => {
   return (
-    <Navbar height={72} maxWidth="2xl">
+    <Navbar height={72} maxWidth="xl">
       <NavbarBrand>
         <Avatar src="/memoji.jpg" />
         <div className="ml-3">
