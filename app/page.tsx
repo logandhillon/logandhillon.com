@@ -41,19 +41,21 @@ export default function Portfolio() {
               intersection of design and engineering.
             </p>
             <div className="flex gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-450">
-              <Button color="primary" className="glow-hover">
-                <Link href={"mailto:" + siteConfig.email}>Get in touch</Link>
+              <Button
+                color="primary"
+                className="glow-hover"
+                as={Link}
+                href={"mailto:" + siteConfig.email}
+              >
+                Get in touch
               </Button>
-              <Button variant="flat" color="secondary">
-                <Link
-                  href="https://polypass.ca"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex"
-                >
-                  Learn about Polypass{" "}
-                  <ArrowSquareOut className="ml-2 h-4 w-4" />
-                </Link>
+              <Button
+                variant="ghost"
+                color="primary"
+                as={Link}
+                href="#featured-work"
+              >
+                View my work
               </Button>
             </div>
           </div>
@@ -141,7 +143,10 @@ export default function Portfolio() {
       </section>
 
       {/* Featured Work */}
-      <section className="container max-w-7xl mx-auto px-6 py-16">
+      <section
+        id="featured-work"
+        className="container max-w-7xl mx-auto px-6 py-16"
+      >
         <h3 className="text-sm uppercase tracking-wide text-muted-foreground mb-8">
           Featured Work
         </h3>
@@ -213,8 +218,9 @@ export default function Portfolio() {
                   Computer Engineering Lead
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Competing at the highest level
-                  of robotics through engineering excellence and teamwork. Top 20 globally in 2025, 4th in Canada.
+                  Competing at the highest level of robotics through engineering
+                  excellence and teamwork. Top 20 globally in 2025, 4th in
+                  Canada.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3 py-1 text-xs rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/20">
@@ -259,10 +265,10 @@ export default function Portfolio() {
             </p>
 
             <p className="text-lg text-foreground leading-relaxed">
-              I work at FIRST Robotics Team 5409; we operate at an industry level,
-              with real deadlines and real constraints. Competing globally on
-              applied robotics problems shaped how I think about engineering,
-              pressure, and teamwork.
+              I work at FIRST Robotics Team 5409; we operate at an industry
+              level, with real deadlines and real constraints. Competing
+              globally on applied robotics problems shaped how I think about
+              engineering, pressure, and teamwork.
             </p>
 
             <p className="text-lg text-foreground leading-relaxed font-semibold">

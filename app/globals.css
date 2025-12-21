@@ -5,6 +5,10 @@
 
 @config "../tailwind.config.js";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   body {
     @apply bg-background text-foreground;
