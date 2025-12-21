@@ -75,7 +75,7 @@ const FEATURED_WORK = [
     description:
       "Modern access control and attendance systems that make security management simple for organizations.",
     href: "https://polypass.ca",
-    heroImages: [], // TOOD: images for polypass
+    heroImages: null, // TOOD: images for polypass
     tags: [
       {
         label: "Business & Entrepreneurship",
@@ -99,12 +99,18 @@ const FEATURED_WORK = [
     role: "Computer Engineering Lead",
     description:
       "Competing at the highest level of robotics through engineering excellence and teamwork. Top 20 globally in 2025, 4th in Canada.",
-    heroImages: [
-      "/img/preview/frc5409/1pitcrew.jpg",
-      "/img/preview/frc5409/2team.jpg",
-      "/img/preview/frc5409/3robot.jpg",
-      "/img/preview/frc5409/4match.jpg",
-    ],
+    hero: (
+      <RotatingHeroImage
+        images={[
+          "/img/preview/frc5409/1pitcrew.jpg",
+          "/img/preview/frc5409/2team.jpg",
+          "/img/preview/frc5409/3robot.jpg",
+          "/img/preview/frc5409/4match.jpg",
+        ]}
+        alt="Rotating preview images of FIRST robotics team 5409"
+        interval={3000}
+      />
+    ),
     tags: [
       {
         label: "Leadership",
@@ -215,17 +221,7 @@ export default function Portfolio() {
               <div className="rounded-lg border border-border bg-card overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-2">
                 {/* card preview */}
                 <div className="aspect-video relative overflow-hidden">
-                  {work.heroImages ? (
-                    <RotatingHeroImage
-                      images={work.heroImages}
-                      alt={`${work.title} preview`}
-                      interval={3000}
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-linear-to-br from-blue-500 via-purple-500 to-blue-600 text-6xl font-bold text-white/90">
-                      POLYPASS
-                    </div>
-                  )}
+                  {work.hero}
                 </div>
 
                 {/* card content */}
