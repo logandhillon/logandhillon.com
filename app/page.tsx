@@ -1,5 +1,6 @@
 "use client";
 
+import { RotatingHeroImage } from "@/components/rotating-img";
 import siteConfig from "@/config/site";
 import { Button } from "@heroui/react";
 import {
@@ -74,8 +75,7 @@ const FEATURED_WORK = [
     description:
       "Modern access control and attendance systems that make security management simple for organizations.",
     href: "https://polypass.ca",
-    heroText: "POLYPASS",
-    gradient: "from-blue-500 via-purple-500 to-blue-600",
+    heroImages: [], // TOOD: images for polypass
     tags: [
       {
         label: "Business & Entrepreneurship",
@@ -99,8 +99,12 @@ const FEATURED_WORK = [
     role: "Computer Engineering Lead",
     description:
       "Competing at the highest level of robotics through engineering excellence and teamwork. Top 20 globally in 2025, 4th in Canada.",
-    heroText: "5409",
-    gradient: "from-cyan-500 via-blue-500 to-indigo-600",
+    heroImages: [
+      "/img/preview/frc5409/1pitcrew.jpg",
+      "/img/preview/frc5409/2team.jpg",
+      "/img/preview/frc5409/3robot.jpg",
+      "/img/preview/frc5409/4match.jpg",
+    ],
     tags: [
       {
         label: "Leadership",
@@ -209,15 +213,22 @@ export default function Portfolio() {
           {FEATURED_WORK.map((work) => (
             <div key={work.title} className="group">
               <div className="rounded-lg border border-border bg-card overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-2">
-                <div
-                  className={`aspect-video bg-linear-to-br ${work.gradient} flex items-center justify-center relative overflow-hidden`}
-                >
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
-                  <div className="text-6xl font-bold text-white/90 relative z-10 group-hover:scale-110 transition-transform duration-300">
-                    {work.heroText}
-                  </div>
+                {/* card preview */}
+                <div className="aspect-video relative overflow-hidden">
+                  {work.heroImages ? (
+                    <RotatingHeroImage
+                      images={work.heroImages}
+                      alt={`${work.title} preview`}
+                      interval={3000}
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-linear-to-br from-blue-500 via-purple-500 to-blue-600 text-6xl font-bold text-white/90">
+                      POLYPASS
+                    </div>
+                  )}
                 </div>
 
+                {/* card content */}
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-3">
                     <h4 className="font-semibold text-xl text-card-foreground group-hover:text-primary transition-colors">
