@@ -1,6 +1,6 @@
 "use client";
 
-import siteConfig from "@/config/site";
+import METADATA from "@/config/content";
 import { Tooltip } from "@heroui/react";
 import {
   EnvelopeSimple,
@@ -47,8 +47,8 @@ export default function Footer() {
           >
             <div className="flex gap-4 justify-center sm:justify-end">
               <FooterIconLink
-                href={"mailto:" + siteConfig.email}
-                tooltip={"Email " + siteConfig.email}
+                href={"mailto:" + METADATA.email}
+                tooltip={"Email " + METADATA.email}
               >
                 <EnvelopeSimple />
               </FooterIconLink>

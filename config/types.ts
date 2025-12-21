@@ -1,0 +1,36 @@
+import { Icon } from "@phosphor-icons/react";
+
+/**
+ * `image` type can have an array of one image, in which case only 1 image is statically rendered.
+ */
+type CardPreview =
+  | {
+      type: "video";
+      src: string;
+      alt: string;
+    }
+  | {
+      type: "image";
+      src: string[];
+      alt: string;
+    };
+
+export type FeaturedWork = {
+  title: string;
+  role: string;
+  description: string;
+  href?: string;
+  preview: CardPreview;
+  tags: {
+    label: string;
+    className: string;
+  }[];
+};
+
+export type Skill = {
+  title: string;
+  description: string;
+  icon: Icon;
+  iconClass: string;
+  iconColor: string;
+};

@@ -1,0 +1,134 @@
+import {
+  Stack,
+  Sparkle,
+  Rocket,
+  UsersThree,
+  Lightning,
+  ChalkboardTeacher,
+} from "@phosphor-icons/react/dist/ssr";
+import { Skill, FeaturedWork } from "./types";
+
+const METADATA = {
+  title: "Logan Dhillon - Engineer & Leader",
+  description:
+    "Full-stack engineer, product designer, and founder of Polypass. Specializing in innovative technology solutions and team leadership.",
+  navbar: [
+    "https://linkedin.com/in/logandhillon", // 0=linkedin
+    "https://github.com/logandhillon", // 1=github
+    "mailto:hello@logandhillon.com", //2=mail
+  ],
+  icon: "/favicon.ico",
+  email: "hello@logandhillon.com",
+};
+
+export default METADATA;
+
+export const SKILLS: Skill[] = [
+  {
+    title: "Full-Stack Development",
+    description: "Building scalable applications with modern frameworks",
+    icon: Stack,
+    iconClass: "bg-blue-500/10 group-hover:bg-blue-500/20",
+    iconColor: "text-purple-500",
+  },
+  {
+    title: "UI/UX Design",
+    description: "Crafting beautiful interfaces that users love",
+    icon: Sparkle,
+    iconClass: "bg-purple-500/10 group-hover:bg-purple-500/20",
+    iconColor: "text-purple-500",
+  },
+  {
+    title: "Product Design",
+    description: "Turning concepts into products people need",
+    icon: Rocket,
+    iconClass: "bg-indigo-500/10 group-hover:bg-indigo-500/20",
+    iconColor: "text-indigo-500",
+  },
+  {
+    title: "Team Management",
+    description: "Leading high-performing teams to achieve ambitious goals",
+    icon: UsersThree,
+    iconClass: "bg-cyan-500/10 group-hover:bg-cyan-500/20",
+    iconColor: "text-purple-500",
+  },
+  {
+    title: "Project Management",
+    description: "Executing complex projects from concept to launch",
+    icon: Lightning,
+    iconClass: "bg-blue-500/10 group-hover:bg-blue-500/20",
+    iconColor: "text-blue-500",
+  },
+  {
+    title: "Leadership & Entrepreneurship",
+    description: "Building ventures and driving innovation",
+    icon: ChalkboardTeacher,
+    iconClass: "bg-violet-500/10 group-hover:bg-violet-500/20",
+    iconColor: "text-purple-500",
+  },
+];
+
+export const FEATURED_WORK: FeaturedWork[] = [
+  {
+    title: "Polypass",
+    role: "Lead Engineer & Founder",
+    description:
+      "Modern access control and attendance systems that make security management simple for organizations.",
+    href: "https://polypass.ca",
+    preview: {
+      type: "video",
+      src: "/previews/polypass/hero_downsampled.mp4",
+      alt: "Sample video of the Polypass Terminal One™ running PASSOS™ 3",
+    },
+    tags: [
+      {
+        label: "Business & Entrepreneurship",
+        className:
+          "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20",
+      },
+      {
+        label: "Management",
+        className:
+          "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20",
+      },
+      {
+        label: "Product Design & Engineering",
+        className:
+          "bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20",
+      },
+    ],
+  },
+  {
+    title: "FIRST Robotics Team 5409",
+    role: "Computer Engineering Lead",
+    description:
+      "Competing at the highest level of robotics through engineering excellence and teamwork. Top 20 globally in 2025, 4th in Canada.",
+    preview: {
+      type: "image",
+      src: [
+        "/previews/frc5409/1pitcrew.jpg",
+        "/previews/frc5409/2team.jpg",
+        "/previews/frc5409/3robot.jpg",
+        "/previews/frc5409/4match.jpg",
+      ],
+      alt: "Rotating preview images of FIRST robotics team 5409",
+    },
+    tags: [
+      {
+        label: "Leadership",
+        className:
+          "bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border-cyan-500/20",
+      },
+      {
+        label: "Problem-Solving",
+        className:
+          "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20",
+      },
+      {
+        label: "Applied Engineering",
+        className:
+          "bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20",
+      },
+    ],
+  },
+];

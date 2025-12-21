@@ -4,31 +4,31 @@ import "./globals.css";
 
 import Footer from "@/components/footer";
 import { Providers } from "@/components/providers";
-import siteConfig from "../config/site";
+import METADATA from "../config/content";
 import { Header } from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: siteConfig.title,
-  description: siteConfig.description,
+  title: METADATA.title,
+  description: METADATA.description,
   icons: {
     // TODO: create light/dark versions of favicon
     icon: [
       {
-        url: siteConfig.icon,
+        url: METADATA.icon,
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: siteConfig.icon,
+        url: METADATA.icon,
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: siteConfig.icon,
+        url: METADATA.icon,
         type: "image/svg+xml",
       },
     ],
-    apple: siteConfig.icon,
+    apple: METADATA.icon,
   },
 };
 

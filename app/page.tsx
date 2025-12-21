@@ -1,136 +1,15 @@
 "use client";
 
 import { PreviewVideo, RotatingHeroImage } from "@/components/preview";
-import siteConfig from "@/config/site";
+import METADATA, { FEATURED_WORK, SKILLS } from "@/config/content";
 import { Button } from "@heroui/react";
 import {
   ArrowSquareOut,
-  ChalkboardTeacher,
   Envelope,
   GithubLogo,
-  Lightning,
   LinkedinLogo,
-  Rocket,
-  Sparkle,
-  Stack,
-  UsersThree,
 } from "@phosphor-icons/react";
 import Link from "next/link";
-
-
-const SKILLS = [
-  {
-    title: "Full-Stack Development",
-    description: "Building scalable applications with modern frameworks",
-    icon: Stack,
-    iconBg: "bg-blue-500/10",
-    iconHoverBg: "group-hover:bg-blue-500/20",
-    iconColor: "text-purple-500",
-  },
-  {
-    title: "UI/UX Design",
-    description: "Crafting beautiful interfaces that users love",
-    icon: Sparkle,
-    iconBg: "bg-purple-500/10",
-    iconHoverBg: "group-hover:bg-purple-500/20",
-    iconColor: "text-purple-500",
-  },
-  {
-    title: "Product Design",
-    description: "Turning concepts into products people need",
-    icon: Rocket,
-    iconBg: "bg-indigo-500/10",
-    iconHoverBg: "group-hover:bg-indigo-500/20",
-    iconColor: "text-indigo-500",
-  },
-  {
-    title: "Team Management",
-    description: "Leading high-performing teams to achieve ambitious goals",
-    icon: UsersThree,
-    iconBg: "bg-cyan-500/10",
-    iconHoverBg: "group-hover:bg-cyan-500/20",
-    iconColor: "text-purple-500",
-  },
-  {
-    title: "Project Management",
-    description: "Executing complex projects from concept to launch",
-    icon: Lightning,
-    iconBg: "bg-blue-500/10",
-    iconHoverBg: "group-hover:bg-blue-500/20",
-    iconColor: "text-blue-500",
-  },
-  {
-    title: "Leadership & Entrepreneurship",
-    description: "Building ventures and driving innovation",
-    icon: ChalkboardTeacher,
-    iconBg: "bg-violet-500/10",
-    iconHoverBg: "group-hover:bg-violet-500/20",
-    iconColor: "text-purple-500",
-  },
-];
-
-const FEATURED_WORK = [
-  {
-    title: "Polypass",
-    role: "Lead Engineer & Founder",
-    description:
-      "Modern access control and attendance systems that make security management simple for organizations.",
-    href: "https://polypass.ca",
-    hero: <PreviewVideo src="/previews/polypass/hero_downsampled.mp4" />,
-    tags: [
-      {
-        label: "Business & Entrepreneurship",
-        className:
-          "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20",
-      },
-      {
-        label: "Management",
-        className:
-          "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20",
-      },
-      {
-        label: "Product Design & Engineering",
-        className:
-          "bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20",
-      },
-    ],
-  },
-  {
-    title: "FIRST Robotics Team 5409",
-    role: "Computer Engineering Lead",
-    description:
-      "Competing at the highest level of robotics through engineering excellence and teamwork. Top 20 globally in 2025, 4th in Canada.",
-    hero: (
-      <RotatingHeroImage
-        images={[
-          "/previews/frc5409/1pitcrew.jpg",
-          "/previews/frc5409/2team.jpg",
-          "/previews/frc5409/3robot.jpg",
-          "/previews/frc5409/4match.jpg",
-        ]}
-        alt="Rotating preview images of FIRST robotics team 5409"
-        interval={3000}
-      />
-    ),
-    tags: [
-      {
-        label: "Leadership",
-        className:
-          "bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border-cyan-500/20",
-      },
-      {
-        label: "Problem-Solving",
-        className:
-          "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20",
-      },
-      {
-        label: "Applied Engineering",
-        className:
-          "bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20",
-      },
-    ],
-  },
-];
 
 export default function Portfolio() {
   return (
@@ -161,7 +40,7 @@ export default function Portfolio() {
                 color="primary"
                 className="glow-hover"
                 as={Link}
-                href={"mailto:" + siteConfig.email}
+                href={"mailto:" + METADATA.email}
               >
                 Get in touch
               </Button>
@@ -193,7 +72,7 @@ export default function Portfolio() {
                 style={{ animationDelay: `${i * 50 + 500}ms` }}
               >
                 <div
-                  className={`h-12 w-12 rounded-lg ${skill.iconBg} ${skill.iconHoverBg} flex items-center justify-center mb-4 transition-colors`}
+                  className={`h-12 w-12 rounded-lg ${skill.iconClass} flex items-center justify-center mb-4 transition-colors`}
                 >
                   <Icon className={`h-6 w-6 ${skill.iconColor}`} />
                 </div>
@@ -223,7 +102,14 @@ export default function Portfolio() {
               <div className="rounded-lg border border-default-300 bg-card overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-2">
                 {/* card preview */}
                 <div className="aspect-video relative overflow-hidden">
-                  {work.hero}
+                  {work.preview.type == "image" ? (
+                    <RotatingHeroImage
+                      images={work.preview.src}
+                      alt={work.preview.alt}
+                    />
+                  ) : work.preview.type == "video" ? (
+                    <PreviewVideo src={work.preview.src} />
+                  ) : null}
                 </div>
 
                 {/* card content */}
@@ -331,10 +217,10 @@ export default function Portfolio() {
                 className="glow-hover"
                 color="primary"
                 as={Link}
-                href={"mailto:" + siteConfig.email}
+                href={"mailto:" + METADATA.email}
               >
                 <Envelope size={20} />
-                {siteConfig.email}
+                {METADATA.email}
               </Button>
               <Button
                 size="lg"

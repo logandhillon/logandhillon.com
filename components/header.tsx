@@ -1,12 +1,12 @@
 "use client";
 
-import siteConfig from "@/config/site";
+import METADATA from "@/config/content";
 import {
   Avatar,
   Navbar,
   NavbarBrand,
   NavbarContent,
-  NavbarItem
+  NavbarItem,
 } from "@heroui/react";
 import { Envelope, GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
 import Link from "next/link";
@@ -25,7 +25,7 @@ export const Header = () => {
       </NavbarBrand>
 
       <NavbarContent className="hidden sm:flex gap-6" justify="end">
-        {siteConfig.navbar.map((item, i) => (
+        {METADATA.navbar.map((item, i) => (
           <NavbarItem
             as={Link}
             key={i}

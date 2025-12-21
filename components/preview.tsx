@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from "react";
 export function RotatingHeroImage({
   images,
   alt,
-  interval = 2000,
+  interval = 3000,
   fadeDuration = 700,
 }: {
   images: string[];
@@ -45,7 +45,7 @@ export function RotatingHeroImage({
   );
 }
 
-export function PreviewVideo({ src }: { src: string }) {
+export function PreviewVideo({ src, alt }: { src: string; alt?: string }) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
@@ -71,6 +71,7 @@ export function PreviewVideo({ src }: { src: string }) {
     <video
       ref={videoRef}
       src={src}
+      aria-label={alt}
       muted
       playsInline
       preload="metadata"
