@@ -183,12 +183,13 @@ export default function Portfolio() {
           Expertise
         </h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {SKILLS.map((skill) => {
+          {SKILLS.map((skill, i) => {
             const Icon = skill.icon;
             return (
               <div
                 key={skill.title}
-                className="group p-6 rounded-lg border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1"
+                className="group p-6 rounded-lg border border-default-300 bg-card hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-10 duration-700"
+                style={{ animationDelay: `${i * 50 + 500}ms` }}
               >
                 <div
                   className={`h-12 w-12 rounded-lg ${skill.iconBg} ${skill.iconHoverBg} flex items-center justify-center mb-4 transition-colors`}
@@ -218,7 +219,7 @@ export default function Portfolio() {
         <div className="grid md:grid-cols-2 gap-8">
           {FEATURED_WORK.map((work) => (
             <div key={work.title} className="group">
-              <div className="rounded-lg border border-border bg-card overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-2">
+              <div className="rounded-lg border border-default-300 bg-card overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-2">
                 {/* card preview */}
                 <div className="aspect-video relative overflow-hidden">
                   {work.hero}
