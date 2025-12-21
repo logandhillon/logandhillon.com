@@ -1,6 +1,6 @@
 "use client";
 
-import { RotatingHeroImage } from "@/components/rotating-img";
+import { PreviewVideo, RotatingHeroImage } from "@/components/preview";
 import siteConfig from "@/config/site";
 import { Button } from "@heroui/react";
 import {
@@ -16,6 +16,7 @@ import {
   UsersThree,
 } from "@phosphor-icons/react";
 import Link from "next/link";
+
 
 const SKILLS = [
   {
@@ -75,7 +76,7 @@ const FEATURED_WORK = [
     description:
       "Modern access control and attendance systems that make security management simple for organizations.",
     href: "https://polypass.ca",
-    heroImages: null, // TOOD: images for polypass
+    hero: <PreviewVideo src="/previews/polypass/hero_downsampled.mp4" />,
     tags: [
       {
         label: "Business & Entrepreneurship",
@@ -102,10 +103,10 @@ const FEATURED_WORK = [
     hero: (
       <RotatingHeroImage
         images={[
-          "/img/preview/frc5409/1pitcrew.jpg",
-          "/img/preview/frc5409/2team.jpg",
-          "/img/preview/frc5409/3robot.jpg",
-          "/img/preview/frc5409/4match.jpg",
+          "/previews/frc5409/1pitcrew.jpg",
+          "/previews/frc5409/2team.jpg",
+          "/previews/frc5409/3robot.jpg",
+          "/previews/frc5409/4match.jpg",
         ]}
         alt="Rotating preview images of FIRST robotics team 5409"
         interval={3000}
