@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import siteConfig from "@/config/site";
 import { Button } from "@heroui/react";
 import {
   ArrowSquareOut,
@@ -14,7 +14,112 @@ import {
   Stack,
   UsersThree,
 } from "@phosphor-icons/react";
-import siteConfig from "@/config/site";
+import Link from "next/link";
+
+const SKILLS = [
+  {
+    title: "Full-Stack Development",
+    description: "Building scalable applications with modern frameworks",
+    icon: Stack,
+    iconBg: "bg-blue-500/10",
+    iconHoverBg: "group-hover:bg-blue-500/20",
+    iconColor: "text-purple-500",
+  },
+  {
+    title: "UI/UX Design",
+    description: "Crafting beautiful interfaces that users love",
+    icon: Sparkle,
+    iconBg: "bg-purple-500/10",
+    iconHoverBg: "group-hover:bg-purple-500/20",
+    iconColor: "text-purple-500",
+  },
+  {
+    title: "Product Design",
+    description: "Turning concepts into products people need",
+    icon: Rocket,
+    iconBg: "bg-indigo-500/10",
+    iconHoverBg: "group-hover:bg-indigo-500/20",
+    iconColor: "text-indigo-500",
+  },
+  {
+    title: "Team Management",
+    description: "Leading high-performing teams to achieve ambitious goals",
+    icon: UsersThree,
+    iconBg: "bg-cyan-500/10",
+    iconHoverBg: "group-hover:bg-cyan-500/20",
+    iconColor: "text-purple-500",
+  },
+  {
+    title: "Project Management",
+    description: "Executing complex projects from concept to launch",
+    icon: Lightning,
+    iconBg: "bg-blue-500/10",
+    iconHoverBg: "group-hover:bg-blue-500/20",
+    iconColor: "text-blue-500",
+  },
+  {
+    title: "Leadership & Entrepreneurship",
+    description: "Building ventures and driving innovation",
+    icon: ChalkboardTeacher,
+    iconBg: "bg-violet-500/10",
+    iconHoverBg: "group-hover:bg-violet-500/20",
+    iconColor: "text-purple-500",
+  },
+];
+
+const FEATURED_WORK = [
+  {
+    title: "Polypass",
+    role: "Lead Engineer & Founder",
+    description:
+      "Modern access control and attendance systems that make security management simple for organizations.",
+    href: "https://polypass.ca",
+    heroText: "POLYPASS",
+    gradient: "from-blue-500 via-purple-500 to-blue-600",
+    tags: [
+      {
+        label: "Business & Entrepreneurship",
+        className:
+          "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20",
+      },
+      {
+        label: "Management",
+        className:
+          "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20",
+      },
+      {
+        label: "Product Design & Engineering",
+        className:
+          "bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20",
+      },
+    ],
+  },
+  {
+    title: "FIRST Robotics Team 5409",
+    role: "Computer Engineering Lead",
+    description:
+      "Competing at the highest level of robotics through engineering excellence and teamwork. Top 20 globally in 2025, 4th in Canada.",
+    heroText: "5409",
+    gradient: "from-cyan-500 via-blue-500 to-indigo-600",
+    tags: [
+      {
+        label: "Leadership",
+        className:
+          "bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border-cyan-500/20",
+      },
+      {
+        label: "Problem-Solving",
+        className:
+          "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20",
+      },
+      {
+        label: "Applied Engineering",
+        className:
+          "bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20",
+      },
+    ],
+  },
+];
 
 export default function Portfolio() {
   return (
@@ -68,77 +173,27 @@ export default function Portfolio() {
           Expertise
         </h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="group p-6 rounded-lg border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
-            <div className="h-12 w-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4 group-hover:bg-blue-500/20 transition-colors">
-              <Stack className="h-6 w-6 text-purple-500" />
-            </div>
-            <h4 className="font-semibold text-lg mb-2 text-card-foreground">
-              Full-Stack Development
-            </h4>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Building scalable applications with modern frameworks
-            </p>
-          </div>
-
-          <div className="group p-6 rounded-lg border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
-            <div className="h-12 w-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-4 group-hover:bg-purple-500/20 transition-colors">
-              <Sparkle className="h-6 w-6 text-purple-500" />
-            </div>
-            <h4 className="font-semibold text-lg mb-2 text-card-foreground">
-              UI/UX Design
-            </h4>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Crafting beautiful interfaces that users love
-            </p>
-          </div>
-
-          <div className="group p-6 rounded-lg border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
-            <div className="h-12 w-12 rounded-lg bg-indigo-500/10 flex items-center justify-center mb-4 group-hover:bg-indigo-500/20 transition-colors">
-              <Rocket className="h-6 w-6 text-indigo-500" />
-            </div>
-            <h4 className="font-semibold text-lg mb-2 text-card-foreground">
-              Product Design
-            </h4>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Turning concepts into products people need
-            </p>
-          </div>
-
-          <div className="group p-6 rounded-lg border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
-            <div className="h-12 w-12 rounded-lg bg-cyan-500/10 flex items-center justify-center mb-4 group-hover:bg-cyan-500/20 transition-colors">
-              <UsersThree className="h-6 w-6 text-purple-500" />
-            </div>
-            <h4 className="font-semibold text-lg mb-2 text-card-foreground">
-              Team Management
-            </h4>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Leading high-performing teams to achieve ambitious goals
-            </p>
-          </div>
-
-          <div className="group p-6 rounded-lg border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
-            <div className="h-12 w-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4 group-hover:bg-blue-500/20 transition-colors">
-              <Lightning className="h-6 w-6 text-blue-500" />
-            </div>
-            <h4 className="font-semibold text-lg mb-2 text-card-foreground">
-              Project Management
-            </h4>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Executing complex projects from concept to launch
-            </p>
-          </div>
-
-          <div className="group p-6 rounded-lg border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
-            <div className="h-12 w-12 rounded-lg bg-violet-500/10 flex items-center justify-center mb-4 group-hover:bg-violet-500/20 transition-colors">
-              <ChalkboardTeacher className="h-6 w-6 text-purple-500" />
-            </div>
-            <h4 className="font-semibold text-lg mb-2 text-card-foreground">
-              Leadership & Entrepreneurship
-            </h4>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Building ventures and driving innovation
-            </p>
-          </div>
+          {SKILLS.map((skill) => {
+            const Icon = skill.icon;
+            return (
+              <div
+                key={skill.title}
+                className="group p-6 rounded-lg border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1"
+              >
+                <div
+                  className={`h-12 w-12 rounded-lg ${skill.iconBg} ${skill.iconHoverBg} flex items-center justify-center mb-4 transition-colors`}
+                >
+                  <Icon className={`h-6 w-6 ${skill.iconColor}`} />
+                </div>
+                <h4 className="font-semibold text-lg mb-2 text-card-foreground">
+                  {skill.title}
+                </h4>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {skill.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -151,91 +206,62 @@ export default function Portfolio() {
           Featured Work
         </h3>
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Polypass */}
-          <div className="group">
-            <div className="rounded-lg border border-border bg-card overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-2">
-              <div className="aspect-video bg-linear-to-br from-blue-500 via-purple-500 to-blue-600 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
-                <div className="text-6xl font-bold text-white/90 relative z-10 group-hover:scale-110 transition-transform duration-300">
-                  POLYPASS
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-start justify-between mb-3">
-                  <h4 className="font-semibold text-xl text-card-foreground group-hover:text-primary transition-colors">
-                    Polypass
-                  </h4>
-                  <Link
-                    href="https://polypass.ca"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <ArrowSquareOut className="h-5 w-5" />
-                  </Link>
-                </div>
-                <p className="text-sm text-primary font-medium mb-3">
-                  Lead Engineer & Founder
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Modern access control and attendance systems that make
-                  security management simple for organizations.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 text-xs rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
-                    Business & Entrepreneurship
-                  </span>
-                  <span className="px-3 py-1 text-xs rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20">
-                    Management
-                  </span>
-                  <span className="px-3 py-1 text-xs rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
-                    Product Design & Engineering
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* FIRST Robotics */}
-          <div className="group">
-            <div className="rounded-lg border border-border bg-card overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-2">
-              <div className="aspect-video bg-linear-to-br from-cyan-500 via-blue-500 to-indigo-600 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
-                <div className="text-6xl font-bold text-white/90 relative z-10 group-hover:scale-110 transition-transform duration-300">
-                  5409
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-start justify-between mb-3">
-                  <h4 className="font-semibold text-xl text-card-foreground group-hover:text-primary transition-colors">
-                    FIRST Robotics Team 5409
-                  </h4>
-                  <div className="text-muted-foreground">
-                    <ArrowSquareOut className="h-5 w-5" />
+          {FEATURED_WORK.map((work) => (
+            <div key={work.title} className="group">
+              <div className="rounded-lg border border-border bg-card overflow-hidden hover:border-primary transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-2">
+                <div
+                  className={`aspect-video bg-linear-to-br ${work.gradient} flex items-center justify-center relative overflow-hidden`}
+                >
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
+                  <div className="text-6xl font-bold text-white/90 relative z-10 group-hover:scale-110 transition-transform duration-300">
+                    {work.heroText}
                   </div>
                 </div>
-                <p className="text-sm text-primary font-medium mb-3">
-                  Computer Engineering Lead
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Competing at the highest level of robotics through engineering
-                  excellence and teamwork. Top 20 globally in 2025, 4th in
-                  Canada.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 text-xs rounded-full bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/20">
-                    Leadership
-                  </span>
-                  <span className="px-3 py-1 text-xs rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
-                    Problem-Solving
-                  </span>
-                  <span className="px-3 py-1 text-xs rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
-                    Applied Engineering
-                  </span>
+
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-3">
+                    <h4 className="font-semibold text-xl text-card-foreground group-hover:text-primary transition-colors">
+                      {work.title}
+                    </h4>
+
+                    {work.href ? (
+                      <Link
+                        href={work.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <ArrowSquareOut className="h-5 w-5" />
+                      </Link>
+                    ) : (
+                      <div className="text-muted-foreground">
+                        <ArrowSquareOut className="h-5 w-5" />
+                      </div>
+                    )}
+                  </div>
+
+                  <p className="text-sm text-primary font-medium mb-3">
+                    {work.role}
+                  </p>
+
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    {work.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {work.tags.map((tag) => (
+                      <span
+                        key={tag.label}
+                        className={`px-3 py-1 text-xs rounded-full border ${tag.className}`}
+                      >
+                        {tag.label}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 
