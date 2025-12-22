@@ -1,26 +1,14 @@
-const siteConfig = {
-  title: "Logan Dhillon",
-  description: "Logan Dhillon's web portfolio",
-  favicon: "/favicon.ico",
+const METADATA = {
+  title: "Logan Dhillon - Engineer & Leader",
+  description:
+    "Full-stack engineer, product designer, and founder of Polypass. Specializing in innovative technology solutions and team leadership.",
+  navbar: [
+    "https://linkedin.com/in/logandhillon", // 0=linkedin
+    "https://github.com/logandhillon", // 1=github
+    "mailto:hello@logandhillon.com", //2=mail
+  ],
+  icon: "/favicon.ico",
   email: "hello@logandhillon.com",
-  navbar: {
-    links: {
-      about: "#about",
-      email: "mailto:hello@logandhillon.com",
-      socials: "#socials",
-      projects: "https://github.com/logandhillon?tab=repositories",
-    },
-  },
-  hero: {
-    words: [
-      "A computer engineer.",
-      "A full-stack developer.",
-      "A hard worker.",
-      "A UX/UI designer.",
-      "A team leader.",
-      "A businessman.",
-    ],
-  },
 };
 
-export default siteConfig;
+export default METADATA;

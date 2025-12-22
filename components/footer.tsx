@@ -1,6 +1,6 @@
 "use client";
 
-import siteConfig from "@/config/site";
+import METADATA from "@/config/site";
 import { Tooltip } from "@heroui/react";
 import {
   EnvelopeSimple,
@@ -26,8 +26,8 @@ const FooterIconLink: FC<{
 export default function Footer() {
   return (
     <footer className="text-background bg-black">
-      <div className="text-center px-5 py-16 mx-auto grid grid-rows-2 grid-cols-1 sm:grid-cols-2 sm:grid-rows-1">
-        <div className="sm:text-left max-w-[512px]">
+      <div className="container max-w-7xl text-center px-5 py-16 mx-auto grid grid-rows-2 grid-cols-1 sm:grid-cols-2 sm:grid-rows-1">
+        <div className="sm:text-left max-w-lg">
           <h3 className="uppercase text-2xl font-bold py-4">Logan Dhillon</h3>
           <p className="text-default-200">
             Full-stack developer, robotics programmer, web developer, team
@@ -35,7 +35,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="sm:text-right mt-8 sm:mt-0 flex-grow">
+        <div className="sm:text-right mt-8 sm:mt-0 grow">
           <h3 className="uppercase text-xl sm:text-2xl font-bold py-4">
             Connect With Me
           </h3>
@@ -47,8 +47,8 @@ export default function Footer() {
           >
             <div className="flex gap-4 justify-center sm:justify-end">
               <FooterIconLink
-                href={"mailto:" + siteConfig.email}
-                tooltip={"Email " + siteConfig.email}
+                href={"mailto:" + METADATA.email}
+                tooltip={"Email " + METADATA.email}
               >
                 <EnvelopeSimple />
               </FooterIconLink>
@@ -70,7 +70,7 @@ export default function Footer() {
       </div>
 
       <div className="text-center">
-        <div className="container mx-auto p-8 border-t border-gray-700">
+        <div className="container max-w-7xl mx-auto p-8 border-t border-gray-700">
           <p className="text-xs text-neutral-50">
             &copy; {new Date().getFullYear()} Logan Dhillon. All rights
             reserved.
