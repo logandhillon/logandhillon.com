@@ -1,9 +1,20 @@
 "use client";
 
-import { Button, Card } from "@heroui/react";
-import { Download, Lightning, Trophy, Users } from "@phosphor-icons/react";
+import { Avatar, Button, Card } from "@heroui/react";
+import {
+  ArrowSquareOut,
+  Download,
+  GitBranch,
+  GithubLogo,
+  Heart,
+  Lightning,
+  Trophy,
+  Users,
+} from "@phosphor-icons/react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
+import { Link as HeroUILink } from "@heroui/react";
 
 export default function HomePage() {
   const [platform] = useState<"windows" | "other">(() => {
@@ -287,6 +298,119 @@ export default function HomePage() {
               Download Now
             </Button>
           </div>
+        </div>
+      </div>
+
+      {/* Open Source Section */}
+      <div className="container mx-auto px-4 py-24">
+        <div className="mx-auto max-w-4xl">
+          <h3 className="mb-4 text-center font-mono text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+            Open Source
+          </h3>
+          <h2 className="mb-6 text-center font-mono text-4xl font-bold text-balance md:text-5xl">
+            Built in the open
+          </h2>
+          <p className="mb-12 text-center text-lg text-muted-foreground text-balance leading-relaxed">
+            Type of War is free and open source. Explore the code, contribute
+            features, or fork it for your own projects.
+          </p>
+
+          <Card className="overflow-hidden border-2 border-border bg-card">
+            <div className="p-8 md:p-12">
+              <div className="mb-8 flex items-center justify-center gap-3">
+                <div className="flex size-12 items-center justify-center rounded-lg bg-red-500/10">
+                  <GitBranch className="size-6 text-red-500" />
+                </div>
+                <div>
+                  <h3 className="font-mono text-xl font-bold">
+                    Git Repository
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    View source, report issues, and contribute
+                  </p>
+                </div>
+              </div>
+
+              <div className="mb-8 space-y-6 rounded-lg bg-muted/50 p-6">
+                <div>
+                  <h4 className="mb-3 flex items-center gap-2 font-mono text-lg font-semibold">
+                    <Heart className="size-5 text-red-500" />
+                    Created By
+                  </h4>
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    <div className="p-4 flex gap-3">
+                      <Avatar />
+                      <div>
+                        <HeroUILink
+                          className="font-semibold flex items-center gap-1"
+                          href="https://logandhillon.com"
+                          underline="hover"
+                        >
+                          Logan Dhillon
+                          <ArrowSquareOut weight="bold" />
+                        </HeroUILink>
+                        <p className="text-sm text-muted-foreground">
+                          Co-Creator, Design & Development
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="p-4 flex gap-3">
+                      <Avatar />
+                      <div>
+                        <HeroUILink
+                          className="font-semibold flex items-center gap-1"
+                          href="https://github.com/RossJck"
+                          underline="hover"
+                          isExternal
+                        >
+                          Jack Ross
+                          <ArrowSquareOut weight="bold" />
+                        </HeroUILink>
+                        <p className="text-sm text-muted-foreground">
+                          Co-Creator, Design & Development
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Special thanks to all open source contributors who have
+                    helped improve Type of War. Your contributions make this
+                    project better for everyone.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                <Button
+                  size="lg"
+                  className="gap-2 bg-foreground px-8 text-base text-background hover:bg-foreground/90"
+                  as={Link}
+                  href="https://github.com/logandhillon/type-of-war"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GithubLogo className="size-5" />
+                  View on GitHub
+                </Button>
+
+                <Button
+                  size="lg"
+                  variant="bordered"
+                  className="gap-2 px-8 text-base bg-transparent"
+                  as={Link}
+                  href="https://github.com/logandhillon/type-of-war/issues"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Contribute
+                </Button>
+              </div>
+            </div>
+          </Card>
         </div>
       </div>
 
