@@ -3,15 +3,15 @@
 import { Button, Card } from "@heroui/react";
 import { Download, Lightning, Trophy, Users } from "@phosphor-icons/react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function HomePage() {
-  const [platform, setPlatform] = useState<"windows" | "other">("other");
-
-  useEffect(() => {
-    const userAgent = window.navigator.userAgent.toLowerCase();
-    if (userAgent.includes("win")) setPlatform("windows");
-  }, []);
+  const [platform] = useState<"windows" | "other">(() => {
+    if (typeof window === "undefined") return "other";
+    return window.navigator.userAgent.toLowerCase().includes("win")
+      ? "windows"
+      : "other";
+  });
 
   return (
     <div className="min-h-screen bg-background">
@@ -78,7 +78,7 @@ export default function HomePage() {
                       className="gap-2 border-gray-700 bg-transparent px-8 text-base text-white hover:bg-gray-900 hover:text-white"
                     >
                       <Download className="size-5" />
-                      Windows .exe
+                      Windows (.exe)
                     </Button>
                   </>
                 )}
