@@ -1,36 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import Footer from "@/components/footer";
-import { Header } from "@/components/header";
 import { Providers } from "@/components/providers";
-import { Metadata } from "next";
-import METADATA from "@/config/site";
 
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: METADATA.title,
-  description: METADATA.description,
-  icons: {
-    // TODO: create light/dark versions of favicon
-    icon: [
-      {
-        url: METADATA.icon,
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: METADATA.icon,
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: METADATA.icon,
-        type: "image/svg+xml",
-      },
-    ],
-    apple: METADATA.icon,
-  },
-};
 
 export default function RootLayout({
   children,
@@ -46,13 +19,7 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <Providers>
-          <Header />
-          <div className="flex flex-col bg-defaut-50">
-            <main className="grow">{children}</main>
-          </div>
-          <Footer />
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
