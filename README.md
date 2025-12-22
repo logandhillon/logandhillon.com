@@ -1,14 +1,46 @@
-# logandhillon.github.io
+# logandhillon.com
 
-Hi, I'm Logan. Programmer, designer, engineer, and entrepreneur.
+Source code for my personal website and portfolio.
 
-You've found the source code for my website, [logandhillon.github.io](https://logandhillon.github.io). Check it out!
+Built as a production Next.js app to showcase selected work, experiments, and ongoing projects.
 
-While you're here, check out my other repos on my profile!
+## Stack
 
-> [!NOTE]
-> This website is still a work in progress and is being actively developed.
+- Next.js
+- React
+- TypeScript
+- TailwindCSS
+- pnpm
 
-You can directly contact me by [email](mailto:logandhi64@gmail.com), also avaliable on my [website](https://logandhillon.github.io).
+Deployed at **[www.logandhillon.com](https://www.logandhillon.com)**
 
-<sup>&copy; 2025 Logan Dhillon. All rights reserved.</sup>
+## Local development
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Then open `http://localhost:3000`
+
+## Structure
+
+- Component-driven UI
+- Content defined via config (skills, featured work, media)
+- Client-side animations and media previews
+- Accessibility and performance considered
+
+## Purpose
+
+This repository exists to support the live site.  
+It reflects how I structure and ship real-world frontend systems.
+
+## Status
+
+Actively maintained.
+
+## Contact
+
+Contact me by email at <dev@logandhillon.com>, or visit my website for more.
+
+© 2025 [Logan Dhillon](https://www.logandhillon.com)
