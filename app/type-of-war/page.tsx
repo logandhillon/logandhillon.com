@@ -102,7 +102,7 @@ export default function HomePage() {
             Game Modes
           </h3>
           <h2 className="mb-16 text-center font-mono text-4xl font-bold text-balance md:text-5xl">
-            Choose your battlefield
+            Choose Your Battlefield
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -165,7 +165,7 @@ export default function HomePage() {
               Built For Performance
             </h3>
             <h2 className="mb-16 text-center font-mono text-4xl font-bold text-balance md:text-5xl">
-              Powered by custom tech
+              Powered by Custom Tech
             </h2>
 
             <div className="grid gap-8 md:grid-cols-3">
@@ -230,7 +230,7 @@ export default function HomePage() {
             Getting Started
           </h3>
           <h2 className="mb-12 text-center font-mono text-4xl font-bold text-balance md:text-5xl">
-            Ready to play
+            Ready to Play
           </h2>
 
           <Card className="overflow-hidden border-2 border-border">
