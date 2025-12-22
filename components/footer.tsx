@@ -1,6 +1,6 @@
 "use client";
 
-import METADATA from "@/config/content";
+import METADATA from "@/config/site";
 import { Tooltip } from "@heroui/react";
 import {
   EnvelopeSimple,

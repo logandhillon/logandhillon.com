@@ -1,6 +1,6 @@
 "use client";
 
-import METADATA from "@/config/content";
+import METADATA from "@/config/site";
 import {
   Avatar,
   Navbar,
@@ -10,6 +10,8 @@ import {
 } from "@heroui/react";
 import { Envelope, GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
 import Link from "next/link";
+import { Key } from "react";
+import { UrlObject } from "url";
 
 export const Header = () => {
   return (
@@ -25,12 +27,12 @@ export const Header = () => {
       </NavbarBrand>
 
       <NavbarContent className="hidden sm:flex gap-6" justify="end">
-        {METADATA.navbar.map((item, i) => (
+        {METADATA.navbar.map((url, i) => (
           <NavbarItem
             as={Link}
             key={i}
             className="hover:text-gray-900 transition-transform hover:underline hover:scale-110"
-            href={item}
+            href={url}
           >
             {i == 0 ? (
               <LinkedinLogo size={22} />

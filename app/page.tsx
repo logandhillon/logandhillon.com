@@ -1,13 +1,14 @@
 "use client";
 
-import { PreviewVideo, RotatingHeroImage } from "@/components/preview";
-import METADATA, { FEATURED_WORK, SKILLS } from "@/config/content";
+import { RotatingHeroImage, PreviewVideo } from "@/components/preview";
+import { SKILLS, FEATURED_WORK } from "@/config/content";
+import METADATA from "@/config/site";
 import { Button } from "@heroui/react";
 import {
   ArrowSquareOut,
   Envelope,
-  GithubLogo,
   LinkedinLogo,
+  GithubLogo,
 } from "@phosphor-icons/react";
 import Link from "next/link";
 
