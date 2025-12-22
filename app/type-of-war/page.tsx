@@ -1,6 +1,6 @@
 "use client";
 
-import { Avatar, Button, Card } from "@heroui/react";
+import { Avatar, Button, Card, Link as HeroUILink } from "@heroui/react";
 import {
   ArrowSquareOut,
   Download,
@@ -14,7 +14,6 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { Link as HeroUILink } from "@heroui/react";
 
 export default function HomePage() {
   const [platform] = useState<"windows" | "other">(() => {

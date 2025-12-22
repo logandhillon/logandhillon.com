@@ -5,8 +5,6 @@ import { Header } from "@/components/header";
 import METADATA from "@/config/site";
 import { Metadata } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: METADATA.title,
   description: METADATA.description,
@@ -30,7 +28,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default function PortfolioLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
