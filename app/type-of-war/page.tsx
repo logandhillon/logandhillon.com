@@ -49,8 +49,8 @@ export default function HomePage() {
               </h2>
 
               <p className="mb-6 text-xl text-gray-400 text-balance leading-relaxed">
-                Type faster. Think quicker. Dominate the arena. A real-time
-                typing strategy game where every keystroke counts.
+                Type faster. Think quicker. A real-time typing strategy game
+                where every keystroke counts.
               </p>
 
               {/* Download Buttons */}
@@ -337,8 +337,8 @@ export default function HomePage() {
                     Created By
                   </h4>
                   <div className="grid gap-3 sm:grid-cols-2">
-                    <div className="p-4 flex gap-3">
-                      <Avatar />
+                    <div className="p-4 flex gap-3 items-center">
+                      <Avatar src="/memoji.jpg" isBordered />
                       <div>
                         <HeroUILink
                           className="font-semibold flex items-center gap-1"
@@ -349,13 +349,16 @@ export default function HomePage() {
                           <ArrowSquareOut weight="bold" />
                         </HeroUILink>
                         <p className="text-sm text-muted-foreground">
-                          Co-Creator, Design & Development
+                          Game Design & Development
                         </p>
                       </div>
                     </div>
 
-                    <div className="p-4 flex gap-3">
-                      <Avatar />
+                    <div className="p-4 flex gap-3 items-center">
+                      <Avatar
+                        src="/type-of-war/RossJck_profile.jpg"
+                        isBordered
+                      />
                       <div>
                         <HeroUILink
                           className="font-semibold flex items-center gap-1"
@@ -367,20 +370,18 @@ export default function HomePage() {
                           <ArrowSquareOut weight="bold" />
                         </HeroUILink>
                         <p className="text-sm text-muted-foreground">
-                          Co-Creator, Design & Development
+                          Game Development
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Special thanks to all open source contributors who have
-                    helped improve Type of War. Your contributions make this
-                    project better for everyone.
-                  </p>
-                </div>
+                <p className="text-center text-sm text-muted-foreground leading-relaxed">
+                  Special thanks to all open source contributors who have helped
+                  improve Type of War. Your contributions make this project
+                  better for everyone.
+                </p>
               </div>
 
               <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
