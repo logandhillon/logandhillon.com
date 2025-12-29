@@ -17,6 +17,7 @@ type CardPreview =
 
 export type FeaturedWork = {
   title: string;
+  time: string;
   role: string;
   description: string;
   href?: string;

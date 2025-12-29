@@ -56,6 +56,7 @@ export const SKILLS: Skill[] = [
 export const FEATURED_WORK: FeaturedWork[] = [
   {
     title: "Polypass",
+    time: "2024 - Present",
     role: "Lead Engineer & Founder",
     description:
       "Modern access control and attendance systems that make security management simple for organizations.",
@@ -85,6 +86,7 @@ export const FEATURED_WORK: FeaturedWork[] = [
   },
   {
     title: "FIRST Robotics Team 5409",
+    time: "2023 - Present",
     role: "Computer Engineering Lead",
     description:
       "Competing at the highest level of robotics through engineering excellence and teamwork. Top 20 globally in 2025, 4th in Canada.",

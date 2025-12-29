@@ -9,6 +9,7 @@ import {
   Envelope,
   LinkedinLogo,
   GithubLogo,
+  MapPin,
 } from "@phosphor-icons/react";
 import Link from "next/link";
 
@@ -22,21 +23,31 @@ export default function Portfolio() {
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl pointer-events-none animate-pulse delay-1000" />
 
         <div className="container max-w-7xl mx-auto px-6 py-24">
-          <div className="max-w-3xl relative z-10">
+          <div className="max-w-3xl relative z-10 space-y-6">
             <p className="text-primary mb-6 text-xl font-medium">
               Hi, I&apos;m Logan.
             </p>
 
-            <h2 className="text-5xl font-bold text-foreground mb-6 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
+            <h2 className="text-5xl font-bold text-foreground text-balance animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
               Engineer. Designer.{" "}
               <span className="gradient-text animate-gradient">Builder.</span>
             </h2>
+
             <p className="text-xl text-muted-foreground leading-relaxed mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
               Full-stack engineer who turns ideas into reality. I build
               products, lead teams, and solve complex problems at the
               intersection of design and engineering.
             </p>
-            <div className="flex gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-450">
+
+            <div className="flex items-center gap-2 text-default-600 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-450">
+              <MapPin weight="fill" />
+              <p className="mr-2">Toronto, Canada</p>
+
+              <Envelope weight="bold" />
+              <p>hello@logandhillon.com</p>
+            </div>
+
+            <div className="flex gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
               <Button
                 color="primary"
                 className="glow-hover"
@@ -69,7 +80,9 @@ export default function Portfolio() {
             return (
               <div
                 key={skill.title}
-                className="group p-6 rounded-lg border border-default-300 bg-card hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 animate-in fade-in slide-in-from-bottom-10 duration-700"
+                // XXX HOVER ANIMATIONS DIABLED: group hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1
+                // these will be used when skill cards are actually clickable (thats a project for another time)
+                className="p-6 rounded-lg border border-default-300 bg-card animate-in fade-in slide-in-from-bottom-10 duration-700"
                 style={{ animationDelay: `${i * 50 + 500}ms` }}
               >
                 <div
@@ -136,9 +149,10 @@ export default function Portfolio() {
                     )}
                   </div>
 
-                  <p className="text-sm text-primary font-medium mb-3">
-                    {work.role}
-                  </p>
+                  <div className="text-sm mb-3 flex items-center gap-3">
+                    <p className="text-primary font-medium">{work.role}</p>
+                    <p className="text-default-700 font-light">{work.time}</p>
+                  </div>
 
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     {work.description}
@@ -168,33 +182,29 @@ export default function Portfolio() {
             About
           </h3>
           <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6">
-            <p className="text-lg text-foreground leading-relaxed">
-              I build and lead. My time is split between engineering projects
-              and leadership roles where execution and people matter as much as
-              code.
+            <p className="text-lg text-foreground leading-relaxed font-semibold">
+              Hi, I&apos;m Logan, founder of Polypass and lead of computer
+              engineering on FIRST Robotics Team 5409.
             </p>
 
             <p className="text-lg text-foreground leading-relaxed">
-              I work quickly without cutting corners and often act as the person
-              unblocking teams, designing systems, writing first passes, and
-              teaching others how to ship correctly.
+              My time is split between engineering projects and leadership
+              roles. I work quickly without cutting corners and often act as the
+              person unblocking teams, designing systems, writing first passes,
+              and teaching others how to ship correctly.
             </p>
 
             <p className="text-lg text-foreground leading-relaxed">
               I’m currently working on access control and attendance through
-              Polypass, and I care about building teams that execute and
-              products that actually get used.
+              <span className="font-semibold"> Polypass</span>, and I care about
+              building teams that execute and products that actually get used.
             </p>
 
             <p className="text-lg text-foreground leading-relaxed">
-              I work at FIRST Robotics Team 5409; we operate at an industry
-              level, with real deadlines and real constraints. Competing
-              globally on applied robotics problems shaped how I think about
-              engineering, pressure, and teamwork.
-            </p>
-
-            <p className="text-lg text-foreground leading-relaxed font-semibold">
-              That standard carries into everything I build.
+              <span className="font-semibold">FIRST Robotics Team 5409</span>{" "}
+              operates at an industry level, with real deadlines and real
+              constraints. Competing globally on applied robotics problems
+              shaped how I think about engineering, pressure, and teamwork.
             </p>
           </div>
         </div>
@@ -203,7 +213,6 @@ export default function Portfolio() {
       {/* Contact */}
       <section className="relative overflow-hidden">
         <div className="container max-w-7xl mx-auto px-6 py-24 ">
-          <div className="absolute inset-0 bg-linear-to-t from-blue-500/10 via-transparent to-transparent pointer-events-none" />
           <div className="max-w-3xl relative z-10">
             <h3 className="text-sm uppercase tracking-wide text-muted-foreground mb-8">
               Get in touch
