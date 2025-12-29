@@ -1,20 +1,12 @@
 # logandhillon.com
 
-Source code for my personal website and portfolio.
-
-Built as a production Next.js app to showcase selected work, experiments, and ongoing projects.
-
-## Stack
-
-- Next.js
-- React
-- TypeScript
-- TailwindCSS
-- pnpm
+Source code for my personal website and portfolio. Uses React and TailwindCSS to generate static HTML.
 
 Deployed at **[www.logandhillon.com](https://www.logandhillon.com)**
 
 ## Local development
+
+Use `pnpm` as the toolchain.
 
 ```bash
 pnpm install
@@ -29,15 +21,6 @@ Then open `http://localhost:3000`
 - Content defined via config (skills, featured work, media)
 - Client-side animations and media previews
 - Accessibility and performance considered
-
-## Purpose
-
-This repository exists to support the live site.  
-It reflects how I structure and ship real-world frontend systems.
-
-## Status
-
-Actively maintained.
 
 ## Contact
 
