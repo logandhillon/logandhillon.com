@@ -45,17 +45,18 @@ export default function RootLayout({
         content="wpclubyVAcYUAC40rgkUB5RAncvSwdtZkyOa8bxg2cQ"
       />
       <script type="application/ld+json">
-        {
+        {{
+          // @ts-ignore
           "@context": "https://schema.org",
           "@type": "Person",
           "name": "Logan Dhillon",
           "url": "https://logandhillon.com",
           "sameAs": [
-          "https://github.com/logandhillon",
-          "https://linkedin.com/in/logandhillon"
+            "https://github.com/logandhillon",
+            "https://linkedin.com/in/logandhillon"
           ],
           "jobTitle": "Web Developer & Designer"
-        }
+        }}
       </script>
     </head>
     <body className={inter.className}>
