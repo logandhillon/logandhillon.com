@@ -39,21 +39,34 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <meta
-          name="google-site-verification"
-          content="wpclubyVAcYUAC40rgkUB5RAncvSwdtZkyOa8bxg2cQ"
-        />
-      </head>
-      <body className={inter.className}>
-        <Providers>
-          <Header />
-          <div className="flex flex-col bg-defaut-50">
-            <main className="grow">{children}</main>
-          </div>
-          <Footer />
-        </Providers>
-      </body>
+    <head>
+      <meta
+        name="google-site-verification"
+        content="wpclubyVAcYUAC40rgkUB5RAncvSwdtZkyOa8bxg2cQ"
+      />
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Logan Dhillon",
+          "url": "https://logandhillon.com",
+          "sameAs": [
+          "https://github.com/logandhillon",
+          "https://linkedin.com/in/logandhillon"
+          ],
+          "jobTitle": "Web Developer & Designer"
+        }
+      </script>
+    </head>
+    <body className={inter.className}>
+    <Providers>
+      <Header/>
+      <div className="flex flex-col bg-defaut-50">
+        <main className="grow">{children}</main>
+      </div>
+      <Footer/>
+    </Providers>
+    </body>
     </html>
   );
 }
