@@ -35,3 +35,18 @@ export type Skill = {
   iconClass: string;
   iconColor: string;
 };
+
+export type ProjectPreview = {
+  name: string,
+  genre: string,
+  description: string,
+  url: string,
+  img: {
+    src: string,
+    alt: string,
+    height?: number,
+    width?: number
+  },
+  className?: string,
+  downloadable?: boolean
+}
