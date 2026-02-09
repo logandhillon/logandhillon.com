@@ -9,7 +9,7 @@ export default function NotFound() {
     <section className="container mx-auto p-5 text-center mt-32 mb-72 flex flex-col gap-4">
       <h1 className="text-4xl font-semibold">
         <Typewriter
-          words={["404 Not Found :("]}
+          words={["404 Not Found"]}
           loop={1}
           typeSpeed={80}
           delaySpeed={1000}
