@@ -122,7 +122,8 @@ export const PROJECTS: ProjectPreview[] = [
     img: {
       src: "icx.png",
       alt: "Screenshot of an ICX chatroom",
-      height: 300
+      height: 300,
+      isZoomed: true,
     },
     url: "https://github.com/logandhillon/icx/",
     className: "bg-gradient-to-b from-emerald-400 to-emerald-50",
@@ -136,10 +137,24 @@ export const PROJECTS: ProjectPreview[] = [
       src: "type-of-war.png",
       alt: "Screenshot of live Type of War gameplay, featuring a 2-player (1v1) lobby",
       height: 300,
-      className: "object-left"
+      className: "object-left",
     },
     url: "https://logandhillon.com/type-of-war",
     className: "bg-gradient-to-b from-black to-blue-900",
     isTextWhite: true
-  }
+  },
+  {
+    name: "FRC Checkmate",
+    genre: "Robotics system testing library",
+    description: "A lightweight testing framework for FRC robots. Create system tests to ensure your robot performs best on the field.",
+    category: "Robotics",
+    img: {
+      src: "frc-checkmate.png",
+      alt: "Screenshot of the FRC Checkmate documentation",
+      height: 300,
+      isZoomed: true,
+    },
+    url: "https://logandhillon.com/frc-checkmate",
+    className: "bg-gradient-to-b from-red-200 to-red-50",
+  },
 ]
