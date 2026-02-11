@@ -15,10 +15,9 @@ export const ProjectCover: FC<{ project: ProjectPreview }> = ({ project }) => (
         src={"/previews/project/" + project.img.src}
         isZoomed={project.img.isZoomed}
         className={"rounded-none object-cover object-top " + project.img.className}
-        height={project.img.height}
-        width={project.img.width}
+        height={320}
       />
-      <CardFooter className="group-data-footer-white:text-neutral-100 text-black bg-white/10 border-t-1 border-default-300 z-10 justify-between px-6 gap-4"
+      <CardFooter className="h-40 group-data-footer-white:text-neutral-100 text-black bg-white/10 border-t-1 border-default-300 z-10 items-start justify-between px-6 gap-4"
                   as={Link} href={project.url}>
         <div className="space-y-1">
           <p className="text-xs uppercase font-bold group-data-footer-white:text-neutral-100/50 text-black/50">{project.genre}</p>

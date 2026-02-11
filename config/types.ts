@@ -51,8 +51,6 @@ export type ProjectPreview = {
   img: {
     src: string,
     alt: string,
-    height?: number,
-    width?: number,
     isZoomed?: boolean,
     className?: string,
   },
