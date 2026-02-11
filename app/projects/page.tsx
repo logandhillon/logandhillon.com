@@ -15,23 +15,24 @@ const grouped: [string, ProjectPreview[]][] = Object.entries<ProjectPreview[]>({
 
 export default function Page() {
   return (
-    <section
-      className="min-h-screen px-8 py-8 space-y-8 bg-neutral-100">
-      <div className="space-y-1">
-        <h1 className="text-3xl font-semibold">All Projects</h1>
-        <p className="text-sm">This page serves as an index for all my projects.</p>
-      </div>
-
-      {grouped.map(([category, projects]) => (
-        <div key={category} className="space-y-4">
-          <h2 className="text-xl font-semibold">{category}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-            {projects.map((p, i) => (
-              <ProjectCover key={`${category}-${i}`} project={p}/>
-            ))}
-          </div>
+    <section className="min-h-screen bg-neutral-100">
+      <div className="px-8 py-8 space-y-8 max-w-7xl mx-auto">
+        <div className="space-y-1">
+          <h1 className="text-3xl font-semibold">All Projects</h1>
+          <p className="text-sm">This page serves as an index for all my projects.</p>
         </div>
-      ))}
+
+        {grouped.map(([category, projects]) => (
+          <div key={category} className="space-y-4">
+            <h2 className="text-xl font-semibold">{category}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+              {projects.map((p, i) => (
+                <ProjectCover key={`${category}-${i}`} project={p}/>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

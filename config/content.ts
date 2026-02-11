@@ -115,18 +115,18 @@ export const FEATURED_WORK: FeaturedWork[] = [
 
 export const PROJECTS: ProjectPreview[] = [
   {
-    name: "Internet Communication Exchange (ICX)",
-    genre: "Desktop application",
-    description: "IRC: recreated for the 21st century.",
-    category: "Networking & Communication",
+    name: "FRC Checkmate",
+    genre: "Robotics system testing library",
+    description: "A lightweight testing framework for FRC robots. Create system tests to ensure your robot performs best on the field.",
+    category: "Robotics",
     img: {
-      src: "icx.png",
-      alt: "Screenshot of an ICX chatroom",
+      src: "frc-checkmate.png",
+      alt: "Screenshot of the FRC Checkmate documentation",
       height: 300,
       isZoomed: true,
     },
-    url: "https://github.com/logandhillon/icx/",
-    className: "bg-gradient-to-b from-emerald-400 to-emerald-50",
+    url: "https://logandhillon.com/frc-checkmate",
+    className: "bg-gradient-to-b from-red-200 to-red-50",
   },
   {
     name: "Type of War",
@@ -144,17 +144,17 @@ export const PROJECTS: ProjectPreview[] = [
     isTextWhite: true
   },
   {
-    name: "FRC Checkmate",
-    genre: "Robotics system testing library",
-    description: "A lightweight testing framework for FRC robots. Create system tests to ensure your robot performs best on the field.",
-    category: "Robotics",
+    name: "Internet Communication Exchange (ICX)",
+    genre: "Online chatroom & network protocol",
+    description: "IRC: recreated for the 21st century.",
+    category: "Networking & Communication",
     img: {
-      src: "frc-checkmate.png",
-      alt: "Screenshot of the FRC Checkmate documentation",
+      src: "icx.png",
+      alt: "Screenshot of an ICX chatroom",
       height: 300,
       isZoomed: true,
     },
-    url: "https://logandhillon.com/frc-checkmate",
-    className: "bg-gradient-to-b from-red-200 to-red-50",
+    url: "https://github.com/logandhillon/icx/",
+    className: "bg-gradient-to-b from-emerald-400 to-emerald-50",
   },
 ]

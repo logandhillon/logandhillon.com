@@ -18,7 +18,7 @@ export const ProjectCover: FC<{ project: ProjectPreview }> = ({ project }) => (
         height={project.img.height}
         width={project.img.width}
       />
-      <CardFooter className="group-data-footer-white:text-neutral-100 text-black bg-white/10 border-t-1 border-default-300 z-10 justify-between px-6"
+      <CardFooter className="group-data-footer-white:text-neutral-100 text-black bg-white/10 border-t-1 border-default-300 z-10 justify-between px-6 gap-4"
                   as={Link} href={project.url}>
         <div className="space-y-1">
           <p className="text-xs uppercase font-bold group-data-footer-white:text-neutral-100/50 text-black/50">{project.genre}</p>
