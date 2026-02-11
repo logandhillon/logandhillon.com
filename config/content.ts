@@ -1,12 +1,5 @@
-import {
-  Stack,
-  Sparkle,
-  Rocket,
-  UsersThree,
-  Lightning,
-  ChalkboardTeacher,
-} from "@phosphor-icons/react/dist/ssr";
-import { Skill, FeaturedWork } from "./types";
+import { ChalkboardTeacher, Lightning, Rocket, Sparkle, Stack, UsersThree, } from "@phosphor-icons/react/dist/ssr";
+import { FeaturedWork, type ProjectPreview, Skill } from "./types";
 
 export const SKILLS: Skill[] = [
   {
@@ -119,3 +112,19 @@ export const FEATURED_WORK: FeaturedWork[] = [
     ],
   },
 ];
+
+export const PROJECTS: ProjectPreview[] = [
+  {
+    name: "Internet Communication Exchange (ICX)",
+    genre: "Desktop application",
+    description: "IRC: recreated for the 21st century.",
+    img: {
+      src: "icx.png",
+      alt: "Screenshot of an ICX chatroom",
+      height: 384
+    },
+    url: "https://github.com/logandhillon/icx/",
+    className: "bg-gradient-to-b from-emerald-400 to-emerald-50 text-black",
+    downloadable: true
+  }
+]

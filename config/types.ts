@@ -40,6 +40,7 @@ export type ProjectPreview = {
   name: string,
   genre: string,
   description: string,
+  category?: string,
   url: string,
   img: {
     src: string,
@@ -49,4 +50,5 @@ export type ProjectPreview = {
   },
   className?: string,
   downloadable?: boolean
+  featured?: boolean,
 }

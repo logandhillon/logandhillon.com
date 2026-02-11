@@ -1,22 +1,20 @@
 import { ProjectCover } from "@/components/project"
+import { PROJECTS } from "@/config/content";
+import { ProjectPreview } from "@/config/types";
 
-import type { ProjectPreview } from "@/config/types"
+const categories = Array.from(
+  new Set(PROJECTS.map(p => p.category).filter(Boolean))
+);
 
-const projects: ProjectPreview[] = [
-  {
-    name: "Internet Communication Exchange (ICX)",
-    genre: "Desktop application",
-    description: "IRC: recreated for the 21st century.",
-    img: {
-      src: "icx.png",
-      alt: "Screenshot of an ICX chatroom",
-      height: 384
-    },
-    url: "https://github.com/logandhillon/icx/",
-    className: "bg-gradient-to-b from-emerald-400 to-emerald-50 text-black",
-    downloadable: true
-  }
-]
+const grouped: Record<string, ProjectPreview[]> = {
+  ...Object.fromEntries(
+    categories.map(cat => [
+      cat,
+      PROJECTS.filter(p => p.category === cat),
+    ])
+  ),
+  Uncategorized: PROJECTS.filter(p => !p.category),
+};
 
 export default function Page() {
   return (
@@ -27,9 +25,16 @@ export default function Page() {
         <p className="text-sm">This page serves as an index for all my projects.</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 ">
-        {projects.map((p, i) => <ProjectCover key={i} project={p}/>)}
-      </div>
+      {Object.entries(grouped).map(([category, projects]) => (
+        <div key={category} className="space-y-4">
+          <h2 className="text-xl font-semibold">{category}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+            {projects.map((p, i) => (
+              <ProjectCover key={`${category}-${i}`} project={p}/>
+            ))}
+          </div>
+        </div>
+      ))}
     </section>
   );
 }

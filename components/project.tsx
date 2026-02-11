@@ -8,7 +8,7 @@ import { FC } from "react";
 
 export const ProjectCover: FC<{ project: ProjectPreview }> = ({ project }) => (
   <div>
-    <Card isFooterBlurred className={project.className}>
+    <Card isFooterBlurred className={project.className} shadow="sm">
       <Image
         removeWrapper
         alt={project.img.alt}
