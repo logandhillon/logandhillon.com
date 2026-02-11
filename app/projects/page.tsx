@@ -6,15 +6,12 @@ const categories = Array.from(
   new Set(PROJECTS.map(p => p.category).filter(Boolean))
 );
 
-const grouped: Record<string, ProjectPreview[]> = {
+const grouped: [string, ProjectPreview[]][] = Object.entries<ProjectPreview[]>({
   ...Object.fromEntries(
-    categories.map(cat => [
-      cat,
-      PROJECTS.filter(p => p.category === cat),
-    ])
+    categories.map(cat => [cat, PROJECTS.filter(p => p.category === cat)])
   ),
   Uncategorized: PROJECTS.filter(p => !p.category),
-};
+}).filter(([_, projects]) => projects.length > 0) // del. empty categories
 
 export default function Page() {
   return (
@@ -25,7 +22,7 @@ export default function Page() {
         <p className="text-sm">This page serves as an index for all my projects.</p>
       </div>
 
-      {Object.entries(grouped).map(([category, projects]) => (
+      {grouped.map(([category, projects]) => (
         <div key={category} className="space-y-4">
           <h2 className="text-xl font-semibold">{category}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
