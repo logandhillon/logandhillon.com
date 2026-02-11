@@ -52,9 +52,12 @@ export type ProjectPreview = {
     src: string,
     alt: string,
     height?: number,
-    width?: number
+    width?: number,
+    isZoomed?: boolean,
+    className?: string,
   },
   className?: string,
+  isTextWhite?: true;
   downloadable?: boolean
   featured?: boolean,
 }

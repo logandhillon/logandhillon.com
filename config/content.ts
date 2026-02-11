@@ -125,7 +125,21 @@ export const PROJECTS: ProjectPreview[] = [
       height: 300
     },
     url: "https://github.com/logandhillon/icx/",
-    className: "bg-gradient-to-b from-emerald-400 to-emerald-50 text-black",
-    downloadable: true
+    className: "bg-gradient-to-b from-emerald-400 to-emerald-50",
+  },
+  {
+    name: "Type of War",
+    genre: "Online-multiplayer video game",
+    description: "A real-time typing strategy game built on a custom game engine. Players compete by typing quickly and accurately to gain an advantage over opponents.",
+    category: "Video Games",
+    img: {
+      src: "type-of-war.png",
+      alt: "Screenshot of live Type of War gameplay, featuring a 2-player (1v1) lobby",
+      height: 300,
+      className: "object-left"
+    },
+    url: "https://logandhillon.com/type-of-war",
+    className: "bg-gradient-to-b from-black to-blue-900",
+    isTextWhite: true
   }
 ]

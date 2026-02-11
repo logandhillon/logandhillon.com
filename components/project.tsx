@@ -8,23 +8,22 @@ import { FC } from "react";
 
 export const ProjectCover: FC<{ project: ProjectPreview }> = ({ project }) => (
   <div>
-    <Card isFooterBlurred className={project.className} shadow="sm">
+    <Card isFooterBlurred data-footer-white={project.isTextWhite} className={"group " + project.className} shadow="sm">
       <Image
         removeWrapper
         alt={project.img.alt}
         src={"/previews/project/" + project.img.src}
-        isBlurred
-        isZoomed
-        className="rounded-none object-cover object-top"
+        isZoomed={project.img.isZoomed}
+        className={"rounded-none object-cover object-top " + project.img.className}
         height={project.img.height}
         width={project.img.width}
       />
-      <CardFooter className="text-black bg-white/10 border-t-1 border-default-300 z-10 justify-between px-6"
+      <CardFooter className="group-data-footer-white:text-neutral-100 text-black bg-white/10 border-t-1 border-default-300 z-10 justify-between px-6"
                   as={Link} href={project.url}>
         <div className="space-y-1">
-          <p className="text-xs uppercase font-bold text-black/50">{project.genre}</p>
+          <p className="text-xs uppercase font-bold group-data-footer-white:text-neutral-100/50 text-black/50">{project.genre}</p>
           <h4 className="font-bold text-lg">{project.name}</h4>
-          <p className="text-xs text-black/60">{project.description}</p>
+          <p className="text-xs group-data-footer-white:text-neutral-100/60 text-black/60">{project.description}</p>
         </div>
         {/* button doesn't do anything, as the footer is clickable; it is just there for ux */}
         <Button isIconOnly color="primary" radius="full">
