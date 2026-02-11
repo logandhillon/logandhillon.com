@@ -118,10 +118,11 @@ export const PROJECTS: ProjectPreview[] = [
     name: "Internet Communication Exchange (ICX)",
     genre: "Desktop application",
     description: "IRC: recreated for the 21st century.",
+    category: "Networking & Communication",
     img: {
       src: "icx.png",
       alt: "Screenshot of an ICX chatroom",
-      height: 384
+      height: 300
     },
     url: "https://github.com/logandhillon/icx/",
     className: "bg-gradient-to-b from-emerald-400 to-emerald-50 text-black",
