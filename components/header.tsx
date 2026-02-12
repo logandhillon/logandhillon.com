@@ -1,17 +1,9 @@
 "use client";
 
 import METADATA from "@/config/site";
-import {
-  Avatar,
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-} from "@heroui/react";
+import { Avatar, Navbar, NavbarBrand, NavbarContent, NavbarItem, } from "@heroui/react";
 import { Envelope, GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
 import Link from "next/link";
-import { Key } from "react";
-import { UrlObject } from "url";
 
 export const Header = () => {
   return (
@@ -19,9 +11,9 @@ export const Header = () => {
       <NavbarBrand>
         <Avatar src="/memoji.jpg" />
         <div className="ml-3">
-          <h1 className="text-xl font-semibold gradient-text animate-gradient">
+          <Link className="text-xl font-semibold gradient-text animate-gradient hover:underline" href="/">
             Logan Dhillon
-          </h1>
+          </Link>
           <p className="text-sm text-muted-foreground">Engineer & Founder</p>
         </div>
       </NavbarBrand>
