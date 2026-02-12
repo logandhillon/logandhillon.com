@@ -138,7 +138,8 @@ export const PROJECTS: ProjectPreview[] = [
     },
     url: "https://logandhillon.com/type-of-war",
     className: "bg-gradient-to-b from-black to-blue-900",
-    isTextWhite: true
+    isTextWhite: true,
+    featured: true,
   },
   {
     name: "FRC Checkmate",
@@ -204,6 +205,7 @@ export const PROJECTS: ProjectPreview[] = [
     },
     url: "https://github.com/FRC5409/2025-Cobra",
     className: "bg-gradient-to-b from-indigo-500 to-blue-100",
+    featured: true,
   },
   {
     name: "Quark",
@@ -217,6 +219,7 @@ export const PROJECTS: ProjectPreview[] = [
     },
     url: "https://github.com/quark-app/quark",
     className: "bg-gradient-to-b from-neutral-50 to-purple-100",
+    featured: true,
   },
   {
     name: "BadOS Dynamic Shell (bdsh)",
