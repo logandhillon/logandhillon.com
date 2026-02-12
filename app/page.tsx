@@ -60,7 +60,7 @@ export default function Portfolio() {
                 variant="ghost"
                 color="primary"
                 as={Link}
-                href="#featured-work"
+                href="/projects"
               >
                 View my work
               </Button>

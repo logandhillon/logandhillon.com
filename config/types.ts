@@ -5,15 +5,15 @@ import { Icon } from "@phosphor-icons/react";
  */
 type CardPreview =
   | {
-      type: "video";
-      src: string;
-      alt: string;
-    }
+  type: "video";
+  src: string;
+  alt: string;
+}
   | {
-      type: "image";
-      src: string[];
-      alt: string;
-    };
+  type: "image";
+  src: string[];
+  alt: string;
+};
 
 export type FeaturedWork = {
   title: string;
@@ -35,3 +35,26 @@ export type Skill = {
   iconClass: string;
   iconColor: string;
 };
+
+export type ProjectCategory =
+  "Networking & Communication" |
+  "Tools & Software" |
+  "Video Games" |
+  "Robotics";
+
+export type ProjectPreview = {
+  name: string,
+  genre: string,
+  description: string,
+  category?: ProjectCategory | (string & {}),
+  url: string,
+  img: {
+    src: string,
+    alt: string,
+    className?: string,
+  },
+  className?: string,
+  isTextWhite?: true;
+  downloadable?: boolean
+  featured?: boolean,
+}
