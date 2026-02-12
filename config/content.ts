@@ -205,4 +205,17 @@ export const PROJECTS: ProjectPreview[] = [
     url: "https://github.com/FRC5409/2025-Cobra",
     className: "bg-gradient-to-b from-indigo-500 to-blue-100",
   },
+  {
+    name: "Quark",
+    genre: "Quantum computing",
+    description: "A user-friendly app to dive into the realm of quantum computing through simple block-based coding.\nCreated for EurekaHACKS 2024, a hackathon in Toronto, CA.",
+    category: "Tools & Software",
+    img: {
+      src: "quark.png",
+      alt: "A picture of 5409's 2025 robot, Cobra",
+      className: "object-top"
+    },
+    url: "https://github.com/quark-app/quark",
+    className: "bg-gradient-to-b from-neutral-50 to-purple-100",
+  },
 ]
