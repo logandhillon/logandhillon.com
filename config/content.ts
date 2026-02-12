@@ -115,17 +115,16 @@ export const FEATURED_WORK: FeaturedWork[] = [
 
 export const PROJECTS: ProjectPreview[] = [
   {
-    name: "FRC Checkmate",
-    genre: "Robotics system testing library",
-    description: "A lightweight testing framework for FRC robots. Create system tests to ensure your robot performs best on the field.",
-    category: "Robotics",
+    name: "Internet Communication Exchange (ICX)",
+    genre: "chatroom & network protocol",
+    description: "An anonymous online chatroom that keeps IPs safe and securely transmits messages.",
+    category: "Networking & Communication",
     img: {
-      src: "frc-checkmate.png",
-      alt: "Screenshot of the FRC Checkmate documentation",
-      isZoomed: true,
+      src: "icx.png",
+      alt: "Screenshot of an ICX chatroom",
     },
-    url: "https://logandhillon.com/frc-checkmate",
-    className: "bg-gradient-to-b from-blue-200 to-blue-50",
+    url: "https://github.com/logandhillon/icx/",
+    className: "bg-gradient-to-b from-emerald-400 to-emerald-50",
   },
   {
     name: "Type of War",
@@ -142,17 +141,16 @@ export const PROJECTS: ProjectPreview[] = [
     isTextWhite: true
   },
   {
-    name: "Internet Communication Exchange (ICX)",
-    genre: "chatroom & network protocol",
-    description: "An anonymous online chatroom that keeps IPs safe and securely transmits messages.",
-    category: "Networking & Communication",
+    name: "FRC Checkmate",
+    genre: "Robotics system testing library",
+    description: "A lightweight testing framework for FRC robots. Create system tests to ensure your robot performs best on the field.",
+    category: "Robotics",
     img: {
-      src: "icx.png",
-      alt: "Screenshot of an ICX chatroom",
-      isZoomed: true,
+      src: "frc-checkmate.png",
+      alt: "Screenshot of the FRC Checkmate documentation",
     },
-    url: "https://github.com/logandhillon/icx/",
-    className: "bg-gradient-to-b from-emerald-400 to-emerald-50",
+    url: "https://logandhillon.com/frc-checkmate",
+    className: "bg-gradient-to-b from-blue-200 to-blue-50",
   },
   {
     name: "Project V.O.X.E.L.",
@@ -163,7 +161,6 @@ export const PROJECTS: ProjectPreview[] = [
       src: "project-voxel.png",
       alt: "Screenshot of project VOXEL gameplay, featuring a player that built a smiley face out of cobblestone on a grassy landscape.",
       className: "object-bottom",
-      isZoomed: true,
     },
     url: "https://github.com/logandhillon/project-voxel",
     className: "bg-gradient-to-b from-green-600 to-green-950",
@@ -178,9 +175,34 @@ export const PROJECTS: ProjectPreview[] = [
       src: "audp.png",
       alt: "A graph that shows how digital data is encoded into analog signals.",
       className: "object-top",
-      isZoomed: true,
     },
     url: "https://github.com/logandhillon/audp",
     className: "bg-gradient-to-b from-neutral-200 to-purple-100",
+  },
+  {
+    name: "Stormont",
+    genre: "FIRST Robotics",
+    description: "5409's competition robot for the 2024 FRC season, Crescendo.\nI worked on the intake system, ensuring our robot could intake game pieces at maximal efficiency.",
+    category: "Robotics",
+    img: {
+      src: "stormont.png",
+      alt: "A picture of 5409's 2024 robot, Stormont",
+      className: "object-center"
+    },
+    url: "https://github.com/FRC5409/2024-Stormont",
+    className: "bg-gradient-to-b from-red-500 to-orange-100",
+  },
+  {
+    name: "Cobra",
+    genre: "FIRST Robotics",
+    description: "5409's competition robot for the 2025 FRC season, Reefscape.\nI worked on the vision system, AprilTag detection, data logging, IO abstraction, and researched simulation that 5409 uses to this day.",
+    category: "Robotics",
+    img: {
+      src: "cobra.png",
+      alt: "A picture of 5409's 2025 robot, Cobra",
+      className: "object-center"
+    },
+    url: "https://github.com/FRC5409/2025-Cobra",
+    className: "bg-gradient-to-b from-indigo-500 to-blue-100",
   },
 ]

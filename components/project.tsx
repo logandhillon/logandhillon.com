@@ -13,16 +13,19 @@ export const ProjectCover: FC<{ project: ProjectPreview }> = ({ project }) => (
         removeWrapper
         alt={project.img.alt}
         src={"/previews/project/" + project.img.src}
-        isZoomed={project.img.isZoomed}
+        isZoomed
         className={"rounded-none object-cover object-top " + project.img.className}
         height={320}
       />
-      <CardFooter className="h-40 group-data-footer-white:text-neutral-100 text-black bg-white/10 border-t-1 border-default-300 z-10 items-start justify-between px-6 gap-4"
-                  as={Link} href={project.url}>
+      <CardFooter
+        className="h-40 group-data-footer-white:text-neutral-100 text-black bg-white/10 border-t-1 border-default-300 z-10 items-start justify-between px-6 gap-4"
+        as={Link} href={project.url}>
         <div className="space-y-1">
-          <p className="text-xs uppercase font-bold group-data-footer-white:text-neutral-100/50 text-black/50">{project.genre}</p>
+          <p
+            className="text-xs uppercase font-bold group-data-footer-white:text-neutral-100/50 text-black/50">{project.genre}</p>
           <h4 className="font-bold text-lg">{project.name}</h4>
-          <p className="text-xs group-data-footer-white:text-neutral-100/60 text-black/60">{project.description}</p>
+          {project.description.split("\n").map((l, i) =>
+            <p key={i} className="text-xs group-data-footer-white:text-neutral-100/60 text-black/60">{l}</p>)}
         </div>
         {/* button doesn't do anything, as the footer is clickable; it is just there for ux */}
         <Button isIconOnly color="primary" radius="full">
