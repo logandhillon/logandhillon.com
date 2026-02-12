@@ -212,10 +212,38 @@ export const PROJECTS: ProjectPreview[] = [
     category: "Tools & Software",
     img: {
       src: "quark.png",
-      alt: "A picture of 5409's 2025 robot, Cobra",
+      alt: "A screenshot of the Quark app, featuring a program that applies a phase shift to a qubit 3 times.",
       className: "object-top"
     },
     url: "https://github.com/quark-app/quark",
     className: "bg-gradient-to-b from-neutral-50 to-purple-100",
+  },
+  {
+    name: "BadOS Dynamic Shell (bdsh)",
+    genre: "Operating system shell",
+    description: "A POSIX-like shell system with the idea to allow users and developers to operate their systems using Python.",
+    category: "Tools & Software",
+    img: {
+      src: "bados-bdsh.png",
+      alt: "A picture of 5409's 2025 robot, Cobra",
+      className: "object-top-left"
+    },
+    url: "https://badtechnologies.github.io/bdsh",
+    className: "bg-gradient-to-b from-[#5a17eb] to-purple-950",
+    isTextWhite: true,
+  },
+  {
+    name: "BadOS Package Portal & Library",
+    genre: "Package manager & indexer",
+    description: "A library of software for BDSH, shared by first-party developers and the community. Also has an online application (Portal) to index all libraries.",
+    category: "Tools & Software",
+    img: {
+      src: "bados-bpl.png",
+      alt: "A picture of 5409's 2025 robot, Cobra",
+      className: "object-top-left"
+    },
+    url: "https://bplportal.vercel.app",
+    className: "bg-gradient-to-b from-cyan-500 to-cyan-950",
+    isTextWhite: true,
   },
 ]
