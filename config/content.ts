@@ -3,6 +3,27 @@ import { FeaturedWork, type ProjectPreview, Skill } from "./types";
 
 export const SKILLS: Skill[] = [
   {
+    title: "Leadership & Entrepreneurship",
+    description: "Building ventures and driving innovation",
+    icon: ChalkboardTeacher,
+    iconClass: "bg-violet-500/10 group-hover:bg-violet-500/20",
+    iconColor: "text-purple-500",
+  },
+  {
+    title: "Team Management",
+    description: "Leading high-performing teams to achieve ambitious goals",
+    icon: UsersThree,
+    iconClass: "bg-cyan-500/10 group-hover:bg-cyan-500/20",
+    iconColor: "text-purple-500",
+  },
+  {
+    title: "Project Management",
+    description: "Executing complex projects from concept to launch",
+    icon: Lightning,
+    iconClass: "bg-blue-500/10 group-hover:bg-blue-500/20",
+    iconColor: "text-blue-500",
+  },
+  {
     title: "Full-Stack Development",
     description: "Building scalable applications with modern frameworks",
     icon: Stack,
@@ -22,27 +43,6 @@ export const SKILLS: Skill[] = [
     icon: Rocket,
     iconClass: "bg-indigo-500/10 group-hover:bg-indigo-500/20",
     iconColor: "text-indigo-500",
-  },
-  {
-    title: "Team Management",
-    description: "Leading high-performing teams to achieve ambitious goals",
-    icon: UsersThree,
-    iconClass: "bg-cyan-500/10 group-hover:bg-cyan-500/20",
-    iconColor: "text-purple-500",
-  },
-  {
-    title: "Project Management",
-    description: "Executing complex projects from concept to launch",
-    icon: Lightning,
-    iconClass: "bg-blue-500/10 group-hover:bg-blue-500/20",
-    iconColor: "text-blue-500",
-  },
-  {
-    title: "Leadership & Entrepreneurship",
-    description: "Building ventures and driving innovation",
-    icon: ChalkboardTeacher,
-    iconClass: "bg-violet-500/10 group-hover:bg-violet-500/20",
-    iconColor: "text-purple-500",
   },
 ];
 
