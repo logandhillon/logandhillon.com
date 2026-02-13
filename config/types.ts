@@ -55,6 +55,5 @@ export type ProjectPreview = {
   },
   className?: string,
   isTextWhite?: true;
-  downloadable?: boolean
   featured?: boolean,
 }
