@@ -6,36 +6,39 @@ import { Header } from "@/components/header";
 import { Providers } from "@/components/providers";
 import { Metadata } from "next";
 import METADATA from "@/config/site";
+import { ReactNode } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: METADATA.title,
+  title: {
+    template: '%s | Logan Dhillon',
+    default: METADATA.title,
+  },
   description: METADATA.description,
-  icons: {
-    // TODO: create light/dark versions of favicon
-    icon: [
+  openGraph: {
+    title: METADATA.title,
+    description: METADATA.description,
+    url: 'https://logandhillon.com',
+    siteName: 'Logan Dhillon',
+    images: [
       {
-        url: METADATA.icon,
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: METADATA.icon,
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: METADATA.icon,
-        type: "image/svg+xml",
+        url: 'https://logandhillon.com/memoji.jpg',
+        width: 500,
+        height: 500,
+        alt: 'Logan Dhillon - Engineer & Leader',
       },
     ],
-    apple: METADATA.icon,
+    locale: 'en_CA',
+    type: 'website',
   },
+  icons: METADATA.icon,
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -61,7 +64,7 @@ export default function RootLayout({
         }}
       />
     </head>
-    <body className={inter.className}>
+    <body className={`${inter.className} min-h-screen`}>
     <Providers>
       <Header/>
       <div className="flex flex-col bg-defaut-50">

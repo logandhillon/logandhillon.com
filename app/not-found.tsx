@@ -22,7 +22,7 @@ export default function NotFound() {
       </h1>
       <p className="mb-4">
         The content you&apos;re looking for could not be found.
-        <br />
+        <br/>
         Sorry about that.
       </p>
 
