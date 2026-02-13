@@ -11,24 +11,26 @@ import { ReactNode } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://logandhillon.com'),
   title: {
     template: '%s | Logan Dhillon',
     default: METADATA.title,
   },
   description: METADATA.description,
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: METADATA.title,
     description: METADATA.description,
-    url: 'https://logandhillon.com',
+    url: '/',
     siteName: 'Logan Dhillon',
-    images: [
-      {
-        url: 'https://logandhillon.com/memoji.jpg',
-        width: 500,
-        height: 500,
-        alt: 'Logan Dhillon - Engineer & Leader',
-      },
-    ],
+    images: [{
+      url: '/memoji.jpg',
+      width: 500,
+      height: 500,
+      alt: METADATA.title,
+    }],
     locale: 'en_CA',
     type: 'website',
   },
@@ -66,11 +68,11 @@ export default function RootLayout({
     </head>
     <body className={`${inter.className} min-h-screen`}>
     <Providers>
-      <Header/>
+      <Header />
       <div className="flex flex-col bg-defaut-50">
         <main className="grow">{children}</main>
       </div>
-      <Footer/>
+      <Footer />
     </Providers>
     </body>
     </html>
